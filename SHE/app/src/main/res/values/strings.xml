@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SHE</string>
+    <string name="textView_masuk">Masuk sebagai:</string>
+    <string name="textView_password">Password</string>
+    
+    <string-array name="user_array">
+        <item>ADMIN</item>
+        <item>PELAKSANA</item>
+        <item>UMUM</item>
+    </string-array>
 </resources>
