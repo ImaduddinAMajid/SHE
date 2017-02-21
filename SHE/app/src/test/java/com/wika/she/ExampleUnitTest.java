@@ -1,4 +1,4 @@
-package wika.com.she;
+package com.wika.she;
 
 import org.junit.Test;
 

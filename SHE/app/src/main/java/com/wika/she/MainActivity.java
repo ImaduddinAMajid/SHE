@@ -1,4 +1,4 @@
-package wika.com.she;
+package com.wika.she;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +13,5 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         setContentView(R.layout.activity_main);
-
     }
 }
