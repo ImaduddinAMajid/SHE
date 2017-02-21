@@ -2,6 +2,9 @@
     <string name="app_name">SHE</string>
     <string name="textView_masuk">Masuk sebagai:</string>
     <string name="textView_password">Password</string>
+    <string name="spinner_pilihan_user">Pilihan User</string>
+    <string name="button_masuk">Masuk</string>
+    <string name="button_keluar">Keluar</string>
     
     <string-array name="user_array">
         <item>ADMIN</item>
