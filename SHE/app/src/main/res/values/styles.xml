@@ -3,10 +3,24 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">#ffc000</item>
+        <item name="colorPrimaryDark">#ffc000</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <!--item name="icon">@mipmap/ic_launcher</item-->
+        <item name="actionBarStyle">@style/MyActionBar</item>
     </style>
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="titleTextStyle">@style/MyActionBarTitle</item>
+        <item name="subtitleTextStyle">@style/MyActionBarSubtitle</item>
+    </style>
+
+    <style name="MyActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="MyActionBarSubtitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
 
 </resources>
