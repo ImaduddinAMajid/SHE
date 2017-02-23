@@ -41,9 +41,11 @@
                 android:id="@+id/spinner_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
                 android:prompt="@string/spinner_pilihan_user"
                 android:entries="@array/user_array"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:background="@drawable/input_border"/>
 
         <TextView
                 android:layout_width="wrap_content"
@@ -54,14 +56,19 @@
                 android:textColor="@color/white"/>
 
         <EditText
+                android:id="@+id/edit_text_password"
+                android:hint="Password"
+                android:inputType="textPassword"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_border"/>
     </LinearLayout>
 
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_weight="5" android:gravity="end">
 
         <Button
@@ -71,7 +78,7 @@
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:background="@color/button_inout"
                 android:text="@string/button_keluar"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" tools:ignore="ButtonStyle"/>
 
         <Button
                 android:id="@+id/button_masuk"
@@ -79,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:background="#d9d9d9"
                 android:text="@string/button_masuk"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" tools:ignore="ButtonStyle"/>
     </LinearLayout>
 
 </LinearLayout>
