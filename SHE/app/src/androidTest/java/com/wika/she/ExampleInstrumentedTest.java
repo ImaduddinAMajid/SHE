@@ -1,4 +1,4 @@
-package wika.com.she;
+package com.wika.she;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
