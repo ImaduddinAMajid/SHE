@@ -73,6 +73,7 @@
 
         <Button
                 android:id="@+id/button_keluar"
+                android:onClick="keluar"
                 android:layout_width="@dimen/button_keluar_width"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -82,6 +83,7 @@
 
         <Button
                 android:id="@+id/button_masuk"
+                android:onClick="masuk"
                 android:layout_width="@dimen/button_masuk_width"
                 android:layout_height="wrap_content"
                 android:background="#d9d9d9"
