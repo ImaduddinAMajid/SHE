@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">SHE</string>
-    <string name="button_ijin">PENGAJUAN IJIN KERJA</string>
-    <string name="button_rca">RCA</string>
-    <string name="button_exit">KELUAR</string>
-    <string name="text_modu">MODE UMUM</string>
-    <string name="text_modp">MODE PELAKSANA</string>
-
-</resources>
