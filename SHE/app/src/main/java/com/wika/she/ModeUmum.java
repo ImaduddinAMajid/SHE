@@ -5,17 +5,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class UIModePelaksana extends AppCompatActivity {
+public class ModeUmum extends AppCompatActivity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setSubtitle("SHE INTEGRATED APPLICATION");
-        setContentView(R.layout.activity_uimode_pelaksana);
-    }
+        setContentView(R.layout.activity_mode_umum);
 
+    }
 
     public void exit(View view) {
         Intent homeIntent = new Intent(Intent.ACTION_MAIN);
@@ -24,3 +25,4 @@ public class UIModePelaksana extends AppCompatActivity {
         startActivity(homeIntent);
     }
 }
+

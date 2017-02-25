@@ -1,11 +1,11 @@
 package com.wika.she;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 
-public class UIModeUmum extends AppCompatActivity {
+public class ModeAdmin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,9 +13,8 @@ public class UIModeUmum extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setSubtitle("SHE INTEGRATED APPLICATION");
-        setContentView(R.layout.activity_uimode_umum);
-
+        getSupportActionBar().setSubtitle("SHE INTEGRETED APPLICATION");
+        setContentView(R.layout.activity_mode_admin);
     }
 
     public void exit(View view) {
@@ -25,4 +24,3 @@ public class UIModeUmum extends AppCompatActivity {
         startActivity(homeIntent);
     }
 }
-

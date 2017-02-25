@@ -8,8 +8,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UIModeUmum"></activity>
-        <activity android:name=".UIModePelaksana">
+        <activity android:name=".ModeUmum"></activity>
+        <activity android:name=".ModePelaksana"></activity>
+        <activity android:name=".ModeAdmin"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
