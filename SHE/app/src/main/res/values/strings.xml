@@ -1,14 +1,9 @@
 <resources>
-    <string name="app_name">SIAP</string>
-    <string name="textView_masuk">Masuk sebagai:</string>
-    <string name="textView_password">Password</string>
-    <string name="spinner_pilihan_user">Pilihan User</string>
-    <string name="button_masuk">Masuk</string>
-    <string name="button_keluar">Keluar</string>
+    <string name="app_name">SHE</string>
+    <string name="button_ijin">PENGAJUAN IJIN KERJA</string>
+    <string name="button_rca">RCA</string>
+    <string name="button_exit">KELUAR</string>
+    <string name="text_modu">MODE UMUM</string>
+    <string name="text_modp">MODE PELAKSANA</string>
 
-    <string-array name="user_array">
-        <item>ADMIN</item>
-        <item>PELAKSANA</item>
-        <item>UMUM</item>
-    </string-array>
 </resources>
