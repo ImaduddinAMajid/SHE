@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_mode_admin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.wika.she.ModeAdmin"
+        android:background="@color/head_bg">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_moda"
+            android:textStyle="bold"
+            android:textSize="@dimen/menu_text_size"
+            android:textColor="@color/menu_text_color"
+            android:gravity="center"
+    />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <Button
+                android:id="@+id/button_induction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/button_bg"
+                android:textColor="@color/button_text_color"
+                android:textSize="@dimen/button_text_size"
+                android:text="@string/button_induction"
+                android:gravity="center"
+        />
+
+        <Button
+                android:id="@+id/button_commisioning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/button_bg"
+                android:textColor="@color/button_text_color"
+                android:textSize="@dimen/button_text_size"
+                android:text="@string/button_comissioning"
+                android:gravity="center"
+        />
+
+        <Button
+                android:id="@+id/button_per_ijin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/button_bg"
+                android:textColor="@color/button_text_color"
+                android:textSize="@dimen/button_text_size"
+                android:text="@string/button_per_ijin"
+                android:gravity="center"
+        />
+
+        <Button
+                android:id="@+id/button_dokumentasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/button_bg"
+                android:textColor="@color/button_text_color"
+                android:textSize="@dimen/button_text_size"
+                android:text="@string/button_dokumentasi"
+                android:gravity="center"
+        />
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="8"
+            android:gravity="center|bottom"
+            android:orientation="vertical" >
+        <Button
+                android:id="@+id/button_exit"
+                android:onClick="exit"
+                android:layout_gravity="end"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:layout_width="wrap_content"
+                android:text="@string/button_exit"/>
+    </LinearLayout>
+
+    <!--TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MODE ADMIN"/>
+
+    <Button
+            android:id="@+id/button_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/button_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/button_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/button_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/-->
+</LinearLayout>

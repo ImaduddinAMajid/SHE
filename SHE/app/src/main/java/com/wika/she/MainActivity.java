@@ -47,16 +47,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case "ADMIN": intent = new Intent(this, ModeAdmin.class);
                 startActivity(intent);
                 break;
-//            case "PELAKSANA": intent = new Intent(this, ModePelaksana.class);
-//                startActivity(intent);
-//                break;
-//            case "UMUM": intent = new Intent(this, ModeUmum.class);
-//                startActivity(intent);
-//                break;
+            case "PELAKSANA": intent = new Intent(this, ModePelaksana.class);
+                startActivity(intent);
+                break;
+            case "UMUM": intent = new Intent(this, ModeUmum.class);
+                startActivity(intent);
+                break;
         }
     }
 
-    public void keluar(View view) {
+    public void exit(View view) {
         Intent homeIntent = new Intent(Intent.ACTION_MAIN);
         homeIntent.addCategory(Intent.CATEGORY_HOME);
         homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
