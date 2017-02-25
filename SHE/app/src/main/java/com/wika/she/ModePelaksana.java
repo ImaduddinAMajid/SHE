@@ -13,7 +13,7 @@ public class ModePelaksana extends AppCompatActivity {
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setSubtitle("SHE INTEGRATED APPLICATION");
-        setContentView(R.layout.activity_uimode_pelaksana);
+        setContentView(R.layout.activity_mode_pelaksana);
     }
 
 

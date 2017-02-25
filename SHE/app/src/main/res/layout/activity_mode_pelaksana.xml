@@ -29,27 +29,27 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <Button
-                android:id="@+id/button_ijin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:background="@color/button_bg"
-                android:textColor="@color/button_text_color"
-                android:textSize="@dimen/button_text_size"
-                android:text="@string/button_ijin"
-                android:gravity="center"
+            android:id="@+id/button_ijin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/button_bg"
+            android:textColor="@color/button_text_color"
+            android:textSize="@dimen/button_text_size"
+            android:text="@string/button_ijin"
+            android:gravity="center"
         />
 
         <Button
-                android:id="@+id/button_rca"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:background="@color/button_bg"
-                android:textColor="@color/button_text_color"
-                android:textSize="@dimen/button_text_size"
-                android:text="@string/button_rca"
-                android:gravity="center"
+            android:id="@+id/button_rca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/button_bg"
+            android:textColor="@color/button_text_color"
+            android:textSize="@dimen/button_text_size"
+            android:text="@string/button_rca"
+            android:gravity="center"
         />
     </LinearLayout>
 

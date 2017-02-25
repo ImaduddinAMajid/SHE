@@ -14,7 +14,7 @@ public class ModeUmum extends AppCompatActivity {
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setSubtitle("SHE INTEGRATED APPLICATION");
-        setContentView(R.layout.activity_uimode_umum);
+        setContentView(R.layout.activity_mode_umum);
 
     }
 
