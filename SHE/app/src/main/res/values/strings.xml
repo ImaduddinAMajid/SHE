@@ -8,18 +8,49 @@
     <string name="button_dokumentasi">DOKUMENTASI</string>
     <string name="button_masuk">MASUK</string>
     <string name="button_exit">KELUAR</string>
+    <string name="button_submit">SUBMIT</string>
+    <string name="button_cancel">CANCEL</string>
     <string name="text_portal_masuk">PORTAL MASUK</string>
     <string name="text_moda">MODE ADMIN</string>
     <string name="text_modu">MODE UMUM</string>
     <string name="text_modp">MODE PELAKSANA</string>
     <string name="text_masuk">Masuk sebagai:</string>
     <string name="text_password">Password</string>
+    <string name="text_colon">:</string>
     <string name="spinner_pilihan_user">Pilihan User</string>
+    <string name="spinner_pilihan">Pilihan</string>
 
+    <!-- String Comission alat -->
+    <string name="text_form_com_alat">ADMIN > COMISSIONING ALAT</string>
+    <string name="text_jenis_alat">Jenis Alat</string>
+    <string name="text_tanggal">Tanggal</string>
+    <string name="text_tipe">Tipe</string>
+    <string name="text_no_identitas">No Identitas</string>
+    <string name="text_pemilik">Pemilik</string>
+    <string name="text_operator">Operator</string>
+    <string name="text_catatan">Catatan</string>
+    <string name="text_foto_depan">Foto Depan</string>
+
+    <!-- Spinner jenis user -->
     <string-array name="user_array">
         <item>ADMIN</item>
         <item>PELAKSANA</item>
         <item>UMUM</item>
+    </string-array>
+
+    <!-- Spinner jenis alat -->
+    <string-array name="alat_array">
+        <item>EXCAVATOR</item>
+        <item>BULLDOZER</item>
+        <item>DUMP TRUCK</item>
+        <item>GRADER</item>
+        <item>COMPACTOR</item>
+        <item>LIGHT VEHICLE</item>
+        <item>TOWER LAMP</item>
+        <item>GENSET</item>
+        <item>WHELL LOADER</item>
+        <item>CRANE</item>
+        <item>TRUCK TANGKI</item>
     </string-array>
 
 </resources>
