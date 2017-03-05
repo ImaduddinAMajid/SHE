@@ -17,6 +17,11 @@ public class ModeAdmin extends AppCompatActivity {
         setContentView(R.layout.activity_mode_admin);
     }
 
+    public void comissioningClick(View view) {
+        Intent comissionIntent = new Intent(this, FormComissioningAlat.class);
+        startActivity(comissionIntent);
+    }
+
     public void exit(View view) {
         Intent homeIntent = new Intent(Intent.ACTION_MAIN);
         homeIntent.addCategory(Intent.CATEGORY_HOME);
