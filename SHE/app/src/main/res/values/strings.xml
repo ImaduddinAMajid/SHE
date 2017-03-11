@@ -9,7 +9,9 @@
     <string name="button_masuk">MASUK</string>
     <string name="button_exit">KELUAR</string>
     <string name="button_submit">SUBMIT</string>
+    <string name="button_next">NEXT</string>
     <string name="button_cancel">CANCEL</string>
+    <string name="button_back">BACK</string>
     <string name="text_portal_masuk">PORTAL MASUK</string>
     <string name="text_moda">MODE ADMIN</string>
     <string name="text_modu">MODE UMUM</string>
@@ -20,7 +22,7 @@
     <string name="spinner_pilihan_user">Pilihan User</string>
     <string name="spinner_pilihan">Pilihan</string>
 
-    <!-- String Comission alat -->
+    <!-- String Comission alat 1-->
     <string name="text_form_com_alat">ADMIN > COMISSIONING ALAT</string>
     <string name="text_jenis_alat">Jenis Alat</string>
     <string name="text_tanggal">Tanggal</string>
@@ -29,7 +31,12 @@
     <string name="text_pemilik">Pemilik</string>
     <string name="text_operator">Operator</string>
     <string name="text_catatan">Catatan</string>
+
+    <!-- String Comission alat 2 -->
     <string name="text_foto_depan">Foto Depan</string>
+    <string name="text_foto_belakang">Foto Belakang</string>
+    <string name="text_foto_kanan">Foto Samping Kanan</string>
+    <string name="text_foto_kiri">Foto Samping Kiri</string>
 
     <!-- Spinner jenis user -->
     <string-array name="user_array">

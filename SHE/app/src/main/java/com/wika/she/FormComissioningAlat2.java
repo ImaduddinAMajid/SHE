@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class FormComissioningAlat extends AppCompatActivity{
+public class FormComissioningAlat2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,17 +14,15 @@ public class FormComissioningAlat extends AppCompatActivity{
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setSubtitle("SHE INTEGRETED APPLICATION");
-        setContentView(R.layout.activity_form_comissioning_alat);
+        setContentView(R.layout.activity_form_comissioning_alat2);
     }
 
-    public void next(View view) {
-        Intent comissionIntent2 = new Intent(this, FormComissioningAlat2.class);
-        startActivity(comissionIntent2);
+    public void back(View v) {
+        Intent comissionIntent = new Intent(this, FormComissioningAlat.class);
+        startActivity(comissionIntent);
     }
 
-    public void cancel(View view) {
+    public void submit(View v) {
 
     }
 }
-
-
