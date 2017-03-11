@@ -65,14 +65,14 @@
         />
 
         <Button
-                android:id="@+id/button_dokumentasi"
+                android:id="@+id/button_laporan_insiden"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:background="@color/button_bg"
                 android:textColor="@color/button_text_color"
                 android:textSize="@dimen/button_text_size"
-                android:text="@string/button_dokumentasi"
+                android:text="@string/button_laporan_insiden"
                 android:gravity="center"
         />
     </LinearLayout>
