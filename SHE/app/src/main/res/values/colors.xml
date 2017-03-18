@@ -9,5 +9,6 @@
     <color name="button_text_color">#F3FFFF</color>
     <color name="menu_text_color">#F3FFFF</color>
     <color name="black">#000000</color>
+    <color name="checkbox">#D8D8D8</color>
 
 </resources>

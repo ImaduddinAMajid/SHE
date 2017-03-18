@@ -38,6 +38,7 @@
             android:textSize="@dimen/button_text_size"
             android:text="@string/button_ijin"
             android:gravity="center"
+            android:onClick="onIjinClicked"
         />
 
         <Button

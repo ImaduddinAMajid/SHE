@@ -19,6 +19,7 @@
     <string name="text_masuk">Masuk sebagai:</string>
     <string name="text_password">Password</string>
     <string name="text_colon">:</string>
+    <string name="ok">OK</string>
     <string name="spinner_pilihan_user">Pilihan User</string>
     <string name="spinner_pilihan">Pilihan</string>
 
@@ -37,6 +38,25 @@
     <string name="text_foto_belakang">Foto Belakang</string>
     <string name="text_foto_kanan">Foto Samping Kanan</string>
     <string name="text_foto_kiri">Foto Samping Kiri</string>
+
+    <!-- String Pengajuan Ijin Kerja 1 -->
+    <string name="text_form_peng_ijker">PELAKSANA > PENGAJUAN IJIN KERJA</string>
+    <string name="text_diajukan_oleh">Diajukan Oleh</string>
+    <string name="text_lokasi_kerja">Lokasi Kerja</string>
+    <string name="text_lingkup_kerja">Lingkup Kerja</string>
+    <string name="text_jam_kerja">Jam Kerja</string>
+    <string name="text_jam_kerja_hint">00.00</string>
+    <string name="text_kebutuhan_alat_berat">Alat Berat</string>
+    <string name="text_pekerja">Pekerja</string>
+    <string name="text_kelengkapan_keselamatan">Kelengkapan Keselamatan</string>
+    
+    <!-- Checkbox Pengajuan Ijin Kerja I -->
+    <string name="checkbox_sarung_tangan">Sarung Tangan</string>
+    <string name="checkbox_kacamata">Kacamata</string>
+    <string name="checkbox_masker">Masker</string>
+    <string name="checkbox_body_harness">Body Harness</string>
+    <string name="checkbox_pelindung_badan">Pelindung Badan</string>
+    <string name="checkbox_earplug">Earplug</string>
 
     <!-- Spinner jenis user -->
     <string-array name="user_array">
