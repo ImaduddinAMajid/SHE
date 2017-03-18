@@ -22,5 +22,12 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="myDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowTitleStyle">@style/myDialogTitle</item>
+    </style>
+
+    <style name="myDialogTitle" parent="@android:style/TextAppearance.DialogWindowTitle">
+        <item name="android:gravity">center_horizontal</item>
+    </style>
 
 </resources>

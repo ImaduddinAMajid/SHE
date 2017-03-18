@@ -16,11 +16,15 @@ public class ModePelaksana extends AppCompatActivity {
         setContentView(R.layout.activity_mode_pelaksana);
     }
 
-
     public void exit(View view) {
         Intent homeIntent = new Intent(Intent.ACTION_MAIN);
         homeIntent.addCategory(Intent.CATEGORY_HOME);
         homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(homeIntent);
+    }
+
+    public void onIjinClicked(View view) {
+        Intent pengajuanIjinIntent = new Intent(this, PengajuanIjinKerja1.class);
+        startActivity(pengajuanIjinIntent);
     }
 }
