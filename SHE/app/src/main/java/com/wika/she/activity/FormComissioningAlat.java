@@ -1,9 +1,10 @@
-package com.wika.she;
+package com.wika.she.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import com.wika.she.R;
 
 public class FormComissioningAlat extends AppCompatActivity{
 

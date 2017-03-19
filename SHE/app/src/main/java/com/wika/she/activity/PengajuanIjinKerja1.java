@@ -1,10 +1,11 @@
-package com.wika.she;
+package com.wika.she.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import com.wika.she.R;
 import com.wika.she.util.MultiSpinner;
 import com.wika.she.util.MultiSpinnerListener;
 

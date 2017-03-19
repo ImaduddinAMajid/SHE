@@ -8,19 +8,19 @@
             android:label="@string/app_name"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ModeUmum"/>
-        <activity android:name=".ModePelaksana"/>
-        <activity android:name=".ModeAdmin"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.ModeUmum"/>
+        <activity android:name=".activity.ModePelaksana"/>
+        <activity android:name=".activity.ModeAdmin"/>
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".FormComissioningAlat"/>
-        <activity android:name=".FormComissioningAlat2"/>
-        <activity android:name=".PengajuanIjinKerja1">
+        <activity android:name=".activity.FormComissioningAlat"/>
+        <activity android:name=".activity.FormComissioningAlat2"/>
+        <activity android:name=".activity.PengajuanIjinKerja1">
         </activity>
     </application>
 
