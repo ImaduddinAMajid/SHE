@@ -209,7 +209,6 @@
                     android:layout_height="wrap_content"
                     android:spinnerMode="dialog"
                     android:prompt="@string/text_kebutuhan_alat_berat"
-                    android:entries="@array/user_array"
                     android:textColor="@color/menu_text_color"
                     android:background="@drawable/input_border"/>
         </LinearLayout>
@@ -245,7 +244,6 @@
                     android:layout_height="wrap_content"
                     android:spinnerMode="dialog"
                     android:prompt="@string/text_pekerja"
-                    android:entries="@array/user_array"
                     android:textColor="@color/menu_text_color"
                     android:background="@drawable/input_border"/>
         </LinearLayout>

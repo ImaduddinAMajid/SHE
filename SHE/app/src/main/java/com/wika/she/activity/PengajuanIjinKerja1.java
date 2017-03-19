@@ -6,10 +6,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.Spinner;
 import com.wika.she.R;
+import com.wika.she.model.Pegawai;
 import com.wika.she.util.MultiSpinner;
 import com.wika.she.util.MultiSpinnerListener;
+import com.wika.she.util.SpinnerAdapter;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.TreeMap;
 
 public class PengajuanIjinKerja1 extends AppCompatActivity {
@@ -43,6 +48,14 @@ public class PengajuanIjinKerja1 extends AppCompatActivity {
                 }
             }
         });
+
+        ArrayList<Pegawai> list=new ArrayList<>();
+        list.add(this.getPegawai("Joni"));
+        list.add(this.getPegawai("Jono"));
+
+        Spinner spinnerPegawai = (Spinner) findViewById(R.id.spinner_pekerja);
+        SpinnerAdapter adapter = new SpinnerAdapter(this, R.layout.text_img_for_spinner,R.id.txt,list);
+        spinnerPegawai.setAdapter(adapter);
     }
 
     public void onCheckboxClicked(View view) {
@@ -101,5 +114,13 @@ public class PengajuanIjinKerja1 extends AppCompatActivity {
     public void next(View view) {
         Intent pengajuanIjinKerja2 = new Intent(this, PengajuanIjinKerja2.class);
         startActivity(pengajuanIjinKerja2);
+    }
+
+    private Pegawai getPegawai(String name) {
+        return new Pegawai(name,
+                new Date(),
+                "WIKA",
+                "MANAGER",
+                R.drawable.pegawai);
     }
 }
