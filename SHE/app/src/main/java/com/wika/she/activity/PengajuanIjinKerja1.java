@@ -1,5 +1,6 @@
 package com.wika.she.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -95,5 +96,10 @@ public class PengajuanIjinKerja1 extends AppCompatActivity {
 
                 }
         }
+    }
+
+    public void next(View view) {
+        Intent pengajuanIjinKerja2 = new Intent(this, PengajuanIjinKerja2.class);
+        startActivity(pengajuanIjinKerja2);
     }
 }

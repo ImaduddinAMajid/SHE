@@ -22,6 +22,8 @@
         <activity android:name=".activity.FormComissioningAlat2"/>
         <activity android:name=".activity.PengajuanIjinKerja1">
         </activity>
+        <activity android:name=".activity.PengajuanIjinKerja2">
+        </activity>
     </application>
 
 </manifest>
