@@ -1,12 +1,12 @@
-package com.wika.she;
+package com.wika.she.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.Spinner;
+import com.wika.she.R;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 

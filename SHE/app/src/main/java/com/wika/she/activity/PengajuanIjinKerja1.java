@@ -1,10 +1,12 @@
-package com.wika.she;
+package com.wika.she.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import com.wika.she.R;
 import com.wika.she.util.MultiSpinner;
 import com.wika.she.util.MultiSpinnerListener;
 
@@ -94,5 +96,10 @@ public class PengajuanIjinKerja1 extends AppCompatActivity {
 
                 }
         }
+    }
+
+    public void next(View view) {
+        Intent pengajuanIjinKerja2 = new Intent(this, PengajuanIjinKerja2.class);
+        startActivity(pengajuanIjinKerja2);
     }
 }

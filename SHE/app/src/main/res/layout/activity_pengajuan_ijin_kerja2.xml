@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pengajuan_ijin_kerja2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.wika.she.activity.PengajuanIjinKerja2"
+    android:background="@color/head_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Perlengkapan Kerja -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+            <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_perlengkapan_kerja"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="@dimen/form_text_konten"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:text="@string/text_colon"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="@dimen/form_text_konten"/>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                <CheckBox
+                        android:id="@+id/checkbox_jsa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_jsa_di_tempat"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_isolasi_perlengkapan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_isolasi_perlangkapan"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_penutupan_jalan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_penutupan_jalan"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_pemutusan_listrik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_pemutusan_listrik"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_tanda_khusus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_tanda_khusus"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_msds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_msds"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_perancah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_perancah"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_pelindung_jatuh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_pelindung_jatuh"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_kebersihan_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_kebersihan_area"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Izin Kerja Khusus -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+            <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_izin_kerja_khusus"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="@dimen/form_text_konten"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:text="@string/text_colon"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="@dimen/form_text_konten"/>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                <CheckBox
+                        android:id="@+id/checkbox_kerja_panas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_kerja_panas"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_kerja_ketinggian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_kerja_ketinggian"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_kerja_galian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_kerja_galian"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_kerja_listrik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_kerja_listrik"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_angkat_angkut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_kerja_angkat_angkut"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_area_terbatas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox_kerja_area_terbatas"
+                        android:buttonTint="@color/checkbox"
+                        android:textColor="@color/menu_text_color"
+                        android:onClick="onCheckboxClicked"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Catatan -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+            <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_catatan_ijin_kerja"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="@dimen/form_text_konten"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:text="@string/text_colon"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="@dimen/form_text_konten"/>
+
+            <EditText
+                    android:id="@+id/edit_text_catatan"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/text_catatan_ijin_kerja"
+                    android:textColor="@color/menu_text_color"
+                    android:background="@drawable/input_border"/>
+        </LinearLayout>
+
+        <!-- Button -->
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="end">
+
+            <Button
+                    android:id="@+id/button_cancel"
+                    android:onClick="cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/button_cancel"/>
+
+            <Button
+                    android:id="@+id/button_submit"
+                    android:onClick="submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_submit"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

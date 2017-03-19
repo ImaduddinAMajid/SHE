@@ -49,14 +49,36 @@
     <string name="text_kebutuhan_alat_berat">Alat Berat</string>
     <string name="text_pekerja">Pekerja</string>
     <string name="text_kelengkapan_keselamatan">Kelengkapan Keselamatan</string>
-    
-    <!-- Checkbox Pengajuan Ijin Kerja I -->
+
+    <!-- Checkbox Pengajuan Ijin Kerja 1 -->
     <string name="checkbox_sarung_tangan">Sarung Tangan</string>
     <string name="checkbox_kacamata">Kacamata</string>
     <string name="checkbox_masker">Masker</string>
     <string name="checkbox_body_harness">Body Harness</string>
     <string name="checkbox_pelindung_badan">Pelindung Badan</string>
     <string name="checkbox_earplug">Earplug</string>
+
+    <!-- String Pengajuan Ijin Kerja 2 -->
+    <string name="text_perlengkapan_kerja">Perlengkapan Kerja</string>
+    <string name="text_izin_kerja_khusus">Izin Kerja Khusus</string>
+    <string name="text_catatan_ijin_kerja">Catatan</string>
+
+    <!-- Checkbox Pengajuan Ijin Kerja 2 -->
+    <string name="checkbox_jsa_di_tempat">JSA di tempat</string>
+    <string name="checkbox_isolasi_perlangkapan">Isolasi Perlengkapan</string>
+    <string name="checkbox_penutupan_jalan">Penutupan Jalan</string>
+    <string name="checkbox_pemutusan_listrik">Pemutusan Listrik</string>
+    <string name="checkbox_tanda_khusus">Tanda Khusus</string>
+    <string name="checkbox_msds">MSDS</string>
+    <string name="checkbox_perancah">Perancah</string>
+    <string name="checkbox_pelindung_jatuh">Pelindung Jatuh</string>
+    <string name="checkbox_kebersihan_area">Kebersihan Area</string>
+    <string name="checkbox_kerja_panas">Kerja Panas</string>
+    <string name="checkbox_kerja_ketinggian">Kerja Ketinggian</string>
+    <string name="checkbox_kerja_galian">Kerja Galian</string>
+    <string name="checkbox_kerja_listrik">Kerja Listrik</string>
+    <string name="checkbox_kerja_angkat_angkut">Kerja Angkat Angkut</string>
+    <string name="checkbox_kerja_area_terbatas">Kerja Area Terbatas</string>
 
     <!-- Spinner jenis user -->
     <string-array name="user_array">
