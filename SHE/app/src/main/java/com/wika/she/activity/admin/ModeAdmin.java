@@ -24,7 +24,7 @@ public class ModeAdmin extends AppCompatActivity {
     }
 
     public void onLaporanInsidenClicked(View view) {
-        Intent laporanInsidenIntent = new Intent(this, LaporanInsiden1.class);
+        Intent laporanInsidenIntent = new Intent(this, LaporanInsiden.class);
         startActivity(laporanInsidenIntent);
     }
 

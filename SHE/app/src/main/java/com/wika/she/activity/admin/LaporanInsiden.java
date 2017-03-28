@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import com.wika.she.R;
 
-public class LaporanInsiden1 extends AppCompatActivity {
+public class LaporanInsiden extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
