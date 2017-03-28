@@ -28,6 +28,11 @@ public class ModeAdmin extends AppCompatActivity {
         startActivity(laporanInsidenIntent);
     }
 
+    public void onPersetujuanIjinKerjaClicked(View view) {
+        Intent persetujuanIjinKerjaIntent = new Intent(this, PersetujuanIjinKerja.class);
+        startActivity(persetujuanIjinKerjaIntent);
+    }
+
     public void exit(View view) {
         Intent homeIntent = new Intent(Intent.ACTION_MAIN);
         homeIntent.addCategory(Intent.CATEGORY_HOME);

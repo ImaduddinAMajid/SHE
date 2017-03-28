@@ -101,6 +101,14 @@
     <string name="checkbox_kecelakaan">Kecelakaan</string>
     <string name="checkbox_nearmiss">Nearmiss</string>
 
+    <!-- String Persetujuan Ijin Kerja -->
+    <string name="text_form_persetujuan_ijin_kerja">ADMIN > PERSETUJUAN IJIN KERJA</string>
+    <string name="text_diajukan_oleh_persetujuan">Diajukan oleh</string>
+    <string name="text_tanggal_pengajuan">Tgl Pengajuan</string>
+    <string name="text_persetujuan">Persetujuan</string>
+    <string name="text_detail">DETAIL</string>
+    <string name="text_refresh">REFRESH</string>
+
     <!-- Spinner jenis user -->
     <string-array name="user_array">
         <item>ADMIN</item>
