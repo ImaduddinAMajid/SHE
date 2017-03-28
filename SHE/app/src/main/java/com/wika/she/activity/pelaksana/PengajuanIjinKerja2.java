@@ -14,7 +14,7 @@ public class PengajuanIjinKerja2 extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setSubtitle("SHE INTEGRETED APPLICATION");
+        getSupportActionBar().setSubtitle(R.string.sub_title);
         setContentView(R.layout.activity_pengajuan_ijin_kerja2);
     }
 
