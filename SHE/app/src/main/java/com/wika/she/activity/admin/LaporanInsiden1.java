@@ -1,5 +1,6 @@
-package com.wika.she.activity;
+package com.wika.she.activity.admin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -46,6 +47,7 @@ public class LaporanInsiden1 extends AppCompatActivity {
     }
 
     public void next(View view) {
-
+        Intent laporanInsiden2Intent = new Intent(this, LaporanInsiden2.class);
+        startActivity(laporanInsiden2Intent);
     }
 }

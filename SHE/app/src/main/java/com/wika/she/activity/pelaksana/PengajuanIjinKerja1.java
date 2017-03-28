@@ -1,4 +1,4 @@
-package com.wika.she.activity;
+package com.wika.she.activity.pelaksana;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

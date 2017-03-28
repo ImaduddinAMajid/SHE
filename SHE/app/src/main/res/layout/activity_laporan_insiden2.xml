@@ -2,7 +2,7 @@
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/activity_form_comissioning_alat"
+        android:id="@+id/activity_laporan_insiden2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -10,30 +10,32 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
-        tools:context="com.wika.she.activity.admin.FormComissioningAlat"
+        tools:context="com.wika.she.activity.admin.LaporanInsiden2"
         android:background="@color/head_bg">
 
+    <!-- JUDUL -->
     <TextView
-        android:layout_gravity="start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_form_com_alat"
-        android:textStyle="bold"
-        android:textSize="@dimen/form_text_judul"
-        android:textColor="@color/menu_text_color"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/activity_vertical_margin">
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/text_jenis_alat"
-            android:textColor="@color/menu_text_color"
-            android:textSize="@dimen/form_text_konten"/>
+            android:text="@string/text_form_laporan_insiden"
+            android:textStyle="bold"
+            android:textSize="@dimen/form_text_judul"
+            android:textColor="@color/menu_text_color"/>
+
+    <!-- SAKSI KEJADIAN -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_saksi_kejadian"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
 
         <TextView
                 android:layout_width="wrap_content"
@@ -44,213 +46,167 @@
                 android:textColor="@color/menu_text_color"
                 android:textSize="@dimen/form_text_konten"/>
 
-        <Spinner
-                android:id="@+id/spinner_alat"
+        <EditText
+                android:id="@+id/edit_text_saksi_kejadian"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:hint="@string/text_saksi_kejadian"
+                android:textColor="@color/menu_text_color"
+                android:background="@drawable/input_border"/>
+
+    </LinearLayout>
+
+    <!-- WAKTU TERJADI -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_waktu_kejadain"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:text="@string/text_colon"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+        <EditText
+                android:id="@+id/edit_text_waktu_kejadian"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_waktu_kejadain"
+                android:textColor="@color/menu_text_color"
+                android:background="@drawable/input_border"/>
+    </LinearLayout>
+
+    <!-- AKIBAT INSIDEN -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_akibat_insiden"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:text="@string/text_colon"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+        <EditText
+                android:id="@+id/edit_text_akibat_kejadian"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_akibat_insiden"
+                android:textColor="@color/menu_text_color"
+                android:background="@drawable/input_border"/>
+    </LinearLayout>
+
+    <!-- KERUGIAN -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_kerugian"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:text="@string/text_colon"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            <EditText
+                    android:id="@+id/edit_text_kerugian_waktu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/text_kerugian_waktu"
+                    android:textColor="@color/menu_text_color"
+                    android:background="@drawable/input_border"/>
+
+            <EditText
+                    android:id="@+id/edit_text_kerugian_material"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/text_kerugian_material"
+                    android:textColor="@color/menu_text_color"
+                    android:background="@drawable/input_border"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- DOKUMENTASI -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_dokumentasi"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:text="@string/text_colon"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+        <ImageButton
+                android:id="@+id/button_image_dokumentasi"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
                 android:spinnerMode="dialog"
-                android:prompt="@string/spinner_pilihan"
-                android:entries="@array/alat_array"
                 android:textColor="@color/menu_text_color"
                 android:background="@drawable/input_border"/>
+
     </LinearLayout>
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/activity_vertical_margin">
-        <TextView
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/text_tanggal"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:text="@string/text_colon"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <EditText
-                android:id="@+id/edit_text_tanggal"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/text_tanggal"
-                android:textColor="@color/menu_text_color"
-                android:background="@drawable/input_border"/>
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/activity_vertical_margin">
-        <TextView
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/text_tipe"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:text="@string/text_colon"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <EditText
-                android:id="@+id/edit_text_tipe"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/text_tipe"
-                android:textColor="@color/menu_text_color"
-                android:background="@drawable/input_border"/>
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/activity_vertical_margin">
-        <TextView
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/text_no_identitas"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:text="@string/text_colon"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <EditText
-                android:id="@+id/edit_text_no_identitas"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/text_no_identitas"
-                android:textColor="@color/menu_text_color"
-                android:background="@drawable/input_border"/>
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/activity_vertical_margin">
-        <TextView
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/text_pemilik"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:text="@string/text_colon"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <EditText
-                android:id="@+id/edit_text_pemilik"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/text_pemilik"
-                android:textColor="@color/menu_text_color"
-                android:background="@drawable/input_border"/>
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/activity_vertical_margin">
-        <TextView
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/text_operator"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:text="@string/text_colon"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <EditText
-                android:id="@+id/edit_text_operator"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/text_operator"
-                android:textColor="@color/menu_text_color"
-                android:background="@drawable/input_border"/>
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/activity_vertical_margin">
-        <TextView
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/text_catatan"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:text="@string/text_colon"
-                android:textColor="@color/menu_text_color"
-                android:textSize="@dimen/form_text_konten"/>
-
-        <EditText
-                android:id="@+id/edit_text_catatan"
-                android:inputType="textImeMultiLine"
-                android:lines="3"
-                android:gravity="start"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/text_catatan"
-                android:textColor="@color/menu_text_color"
-                android:background="@drawable/input_border"/>
-    </LinearLayout>
-
+    <!-- BUTTON -->
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -272,6 +228,6 @@
                 android:onClick="next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button_next"/>
+                android:text="@string/button_submit"/>
     </LinearLayout>
 </LinearLayout>

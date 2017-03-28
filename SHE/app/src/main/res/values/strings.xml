@@ -92,6 +92,8 @@
     <string name="text_waktu_kejadain">Waktu Terjadi</string>
     <string name="text_akibat_insiden">Akibat Insiden</string>
     <string name="text_kerugian">Kerugian</string>
+    <string name="text_kerugian_waktu">Waktu(hari)</string>
+    <string name="text_kerugian_material">Material(rupiah)</string>
     <string name="text_dokumentasi">Dokumentasi</string>
 
     <!-- Checkbox Laporan Insiden -->
