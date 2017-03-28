@@ -1,4 +1,4 @@
-package com.wika.she.activity;
+package com.wika.she.activity.pelaksana;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ public class ModePelaksana extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setSubtitle("SHE INTEGRATED APPLICATION");
+        getSupportActionBar().setSubtitle(R.string.sub_title);
         setContentView(R.layout.activity_mode_pelaksana);
     }
 

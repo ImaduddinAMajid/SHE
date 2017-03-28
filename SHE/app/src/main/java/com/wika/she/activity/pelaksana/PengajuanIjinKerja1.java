@@ -1,4 +1,4 @@
-package com.wika.she.activity;
+package com.wika.she.activity.pelaksana;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -27,7 +27,7 @@ public class PengajuanIjinKerja1 extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setSubtitle("SHE INTEGRETED APPLICATION");
+        getSupportActionBar().setSubtitle(R.string.sub_title);
         setContentView(R.layout.activity_pengajuan_ijin_kerja1);
 
         list.put("item1", false);

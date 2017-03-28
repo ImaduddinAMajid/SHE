@@ -1,4 +1,4 @@
-package com.wika.she.activity;
+package com.wika.she.activity.admin;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +14,7 @@ public class ModeAdmin extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setSubtitle("SHE INTEGRETED APPLICATION");
+        getSupportActionBar().setSubtitle(R.string.sub_title);
         setContentView(R.layout.activity_mode_admin);
     }
 

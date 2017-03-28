@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">SIAP</string>
+    <string name="sub_title">SHE INTEGRATED APPLICATION</string>
     <string name="button_ijin">PENGAJUAN IJIN KERJA</string>
     <string name="button_rca">RCA</string>
     <string name="button_induction">SHE INDUCTION</string>
@@ -92,6 +93,8 @@
     <string name="text_waktu_kejadain">Waktu Terjadi</string>
     <string name="text_akibat_insiden">Akibat Insiden</string>
     <string name="text_kerugian">Kerugian</string>
+    <string name="text_kerugian_waktu">Waktu(hari)</string>
+    <string name="text_kerugian_material">Material(rupiah)</string>
     <string name="text_dokumentasi">Dokumentasi</string>
 
     <!-- Checkbox Laporan Insiden -->

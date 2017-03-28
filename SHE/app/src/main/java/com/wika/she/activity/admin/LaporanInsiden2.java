@@ -1,12 +1,11 @@
-package com.wika.she.activity;
+package com.wika.she.activity.admin;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import com.wika.she.R;
 
-public class ModeUmum extends AppCompatActivity {
+public class LaporanInsiden2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,15 +14,14 @@ public class ModeUmum extends AppCompatActivity {
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setSubtitle(R.string.sub_title);
-        setContentView(R.layout.activity_mode_umum);
+        setContentView(R.layout.activity_laporan_insiden2);
+    }
+
+    public void cancel(View view) {
 
     }
 
-    public void exit(View view) {
-        Intent homeIntent = new Intent(Intent.ACTION_MAIN);
-        homeIntent.addCategory(Intent.CATEGORY_HOME);
-        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(homeIntent);
+    public void submit(View view) {
+        
     }
 }
-

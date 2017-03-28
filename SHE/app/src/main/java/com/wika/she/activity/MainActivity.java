@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import com.wika.she.R;
+import com.wika.she.activity.admin.ModeAdmin;
+import com.wika.she.activity.pelaksana.ModePelaksana;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setSubtitle("SHE INTEGRETED APPLICATION");
+        getSupportActionBar().setSubtitle(R.string.sub_title);
         setContentView(R.layout.activity_main);
 
         spinner = (Spinner)findViewById(R.id.spinner_user);
