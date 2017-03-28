@@ -84,7 +84,6 @@
     <string-array name="user_array">
         <item>ADMIN</item>
         <item>PELAKSANA</item>
-        <item>UMUM</item>
     </string-array>
 
     <!-- Spinner jenis alat -->
