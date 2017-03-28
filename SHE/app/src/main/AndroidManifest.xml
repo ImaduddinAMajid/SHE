@@ -24,10 +24,12 @@
         </activity>
         <activity android:name=".activity.pelaksana.PengajuanIjinKerja2">
         </activity>
-        <activity android:name=".activity.admin.LaporanInsiden1">
+        <activity android:name=".activity.admin.LaporanInsiden">
         </activity>
         <activity android:name=".activity.admin.LaporanInsiden2">
         </activity>
+        <activity android:name=".activity.admin.PersetujuanIjinKerja"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

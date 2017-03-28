@@ -24,8 +24,13 @@ public class ModeAdmin extends AppCompatActivity {
     }
 
     public void onLaporanInsidenClicked(View view) {
-        Intent laporanInsidenIntent = new Intent(this, LaporanInsiden1.class);
+        Intent laporanInsidenIntent = new Intent(this, LaporanInsiden.class);
         startActivity(laporanInsidenIntent);
+    }
+
+    public void onPersetujuanIjinKerjaClicked(View view) {
+        Intent persetujuanIjinKerjaIntent = new Intent(this, PersetujuanIjinKerja.class);
+        startActivity(persetujuanIjinKerjaIntent);
     }
 
     public void exit(View view) {

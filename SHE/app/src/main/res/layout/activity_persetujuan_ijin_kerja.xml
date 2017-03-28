@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_persetujuan_ijin_kerja"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.wika.she.activity.admin.PersetujuanIjinKerja"
+        android:background="@color/head_bg">
+    <!-- JUDUL -->
+    <TextView
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_form_persetujuan_ijin_kerja"
+            android:textStyle="bold"
+            android:textSize="@dimen/form_text_judul"
+            android:textColor="@color/menu_text_color"/>
+
+    <!-- SUB JUDUL -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp">
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_diajukan_oleh_persetujuan"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_tanggal_pengajuan"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:text=""/>
+
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_persetujuan"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+    </LinearLayout>
+
+    <!-- LIST -->
+    <ListView
+            android:id="@+id/list_ijin_kerja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+</LinearLayout>
