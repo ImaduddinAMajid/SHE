@@ -41,7 +41,7 @@
 
         <Button
                 android:id="@+id/button_comissioning"
-                android:onClick="comissioningClick"
+                android:onClick="onComissioningClicked"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
@@ -66,6 +66,7 @@
 
         <Button
                 android:id="@+id/button_laporan_insiden"
+                android:onClick="onLaporanInsidenClicked"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"

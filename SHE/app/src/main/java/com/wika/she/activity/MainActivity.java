@@ -45,9 +45,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case "PELAKSANA": intent = new Intent(this, ModePelaksana.class);
                 startActivity(intent);
                 break;
-            case "UMUM": intent = new Intent(this, ModeUmum.class);
-                startActivity(intent);
-                break;
         }
     }
 

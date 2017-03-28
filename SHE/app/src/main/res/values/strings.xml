@@ -80,11 +80,28 @@
     <string name="checkbox_kerja_angkat_angkut">Kerja Angkat Angkut</string>
     <string name="checkbox_kerja_area_terbatas">Kerja Area Terbatas</string>
 
+    <!-- String Laporan Insiden -->
+    <string name="text_form_laporan_insiden">ADMIN > LAPORAN INSIDEN</string>
+    <string name="text_nama_korban">Nama Korban</string>
+    <string name="text_ttl_korban">TTL Korban</string>
+    <string name="text_pekerjaan">Pekerjaan</string>
+    <string name="text_unit_kerja">Unit Kerja</string>
+    <string name="text_tipe_insiden">Tipe Insiden</string>
+    <string name="text_kronologi">Kronologi</string>
+    <string name="text_saksi_kejadian">Saksi Kejadian</string>
+    <string name="text_waktu_kejadain">Waktu Terjadi</string>
+    <string name="text_akibat_insiden">Akibat Insiden</string>
+    <string name="text_kerugian">Kerugian</string>
+    <string name="text_dokumentasi">Dokumentasi</string>
+
+    <!-- Checkbox Laporan Insiden -->
+    <string name="checkbox_kecelakaan">Kecelakaan</string>
+    <string name="checkbox_nearmiss">Nearmiss</string>
+
     <!-- Spinner jenis user -->
     <string-array name="user_array">
         <item>ADMIN</item>
         <item>PELAKSANA</item>
-        <item>UMUM</item>
     </string-array>
 
     <!-- Spinner jenis alat -->

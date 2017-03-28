@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".activity.PengajuanIjinKerja2">
         </activity>
+        <activity android:name=".activity.LaporanInsiden1">
+        </activity>
     </application>
 
 </manifest>
