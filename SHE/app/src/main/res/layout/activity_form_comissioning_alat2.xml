@@ -55,11 +55,11 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:spinnerMode="dialog"
-                    android:prompt="@string/spinner_pilihan"
-                    android:entries="@array/alat_array"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:onClick="photoClicked"
                     android:textColor="@color/menu_text_color"
-                    android:background="@drawable/input_border"/>
+                    android:background="@drawable/camera_frame"/>
         </LinearLayout>
 
         <LinearLayout
@@ -90,11 +90,11 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:spinnerMode="dialog"
-                    android:prompt="@string/spinner_pilihan"
-                    android:entries="@array/alat_array"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:onClick="photoClicked"
                     android:textColor="@color/menu_text_color"
-                    android:background="@drawable/input_border"/>
+                    android:background="@drawable/camera_frame"/>
         </LinearLayout>
 
         <LinearLayout
@@ -125,11 +125,11 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:spinnerMode="dialog"
-                    android:prompt="@string/spinner_pilihan"
-                    android:entries="@array/alat_array"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:onClick="photoClicked"
                     android:textColor="@color/menu_text_color"
-                    android:background="@drawable/input_border"/>
+                    android:background="@drawable/camera_frame"/>
         </LinearLayout>
 
         <LinearLayout
@@ -160,11 +160,11 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:spinnerMode="dialog"
-                    android:prompt="@string/spinner_pilihan"
-                    android:entries="@array/alat_array"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:onClick="photoClicked"
                     android:textColor="@color/menu_text_color"
-                    android:background="@drawable/input_border"/>
+                    android:background="@drawable/camera_frame"/>
         </LinearLayout>
     </LinearLayout>
 
