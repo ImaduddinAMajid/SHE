@@ -109,6 +109,16 @@
     <string name="text_detail">DETAIL</string>
     <string name="text_refresh">REFRESH</string>
 
+    <!-- String Induction -->
+    <string name="text_form_she_induction">ADMIN > SHE INDUCTION</string>
+    <string name="text_nama_peserta">Nama Peserta</string>
+    <string name="text_tanggal_induction">Tanggal</string>
+    <string name="text_no_telpon">No. Telepon</string>
+    <string name="text_jabatan">Jabatan</string>
+    <string name="text_unit_kerja_induction">Unit Kerja</string>
+    <string name="text_no_ktp">No KTP</string>
+    <string name="text_foto_peserta">Foto Peserta</string>
+
     <!-- Spinner jenis user -->
     <string-array name="user_array">
         <item>ADMIN</item>
