@@ -10,7 +10,7 @@ import com.wika.she.R;
 import com.wika.she.activity.admin.ModeAdmin;
 import com.wika.she.activity.pelaksana.ModePelaksana;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Spinner spinner;
     String spinner_item;

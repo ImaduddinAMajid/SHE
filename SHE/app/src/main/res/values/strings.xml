@@ -23,6 +23,7 @@
     <string name="ok">OK</string>
     <string name="spinner_pilihan_user">Pilihan User</string>
     <string name="spinner_pilihan">Pilihan</string>
+    <string name="spinner_unit_kerja">Unit Kerja</string>
 
     <!-- String Comission alat 1-->
     <string name="text_form_com_alat">ADMIN > COMISSIONING ALAT</string>
@@ -109,6 +110,16 @@
     <string name="text_detail">DETAIL</string>
     <string name="text_refresh">REFRESH</string>
 
+    <!-- String Induction -->
+    <string name="text_form_she_induction">ADMIN > SHE INDUCTION</string>
+    <string name="text_nama_peserta">Nama Peserta</string>
+    <string name="text_tanggal_induction">Tanggal</string>
+    <string name="text_no_telpon">No. Telepon</string>
+    <string name="text_jabatan">Jabatan</string>
+    <string name="text_unit_kerja_induction">Unit Kerja</string>
+    <string name="text_no_ktp">No KTP</string>
+    <string name="text_foto_peserta">Foto Peserta</string>
+
     <!-- Spinner jenis user -->
     <string-array name="user_array">
         <item>ADMIN</item>
@@ -130,4 +141,12 @@
         <item>TRUCK TANGKI</item>
     </string-array>
 
+    <!-- Spinner unit kerja -->
+    <string-array name="unit_kerja_array">
+        <item>Karyawan Wika</item>
+        <item>Operator Wika</item>
+        <item>Harian Wika</item>
+        <item>Pekerja Mandor</item>
+        <item>Subkontraktor</item>
+    </string-array>
 </resources>
