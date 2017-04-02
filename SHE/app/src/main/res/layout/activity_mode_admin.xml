@@ -37,6 +37,7 @@
                 android:textSize="@dimen/button_text_size"
                 android:text="@string/button_induction"
                 android:gravity="center"
+                android:onClick="onInductionClicked"
         />
 
         <Button

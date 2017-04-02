@@ -78,7 +78,12 @@ public class FormComissioningAlat2 extends AppCompatActivity {
         startActivity(comissionIntent);
     }
 
-    public void submit(View v) throws UnsupportedEncodingException {
+    public void submit(View v) throws UnsupportedEncodingException, JSONException {
+        this.dataJson.put("fotoDepan", "/x/y");
+        this.dataJson.put("fotoBelakang", "/x/y");
+        this.dataJson.put("fotoKanan", "/x/y");
+        this.dataJson.put("fotoKiri", "x/y");
+
         StringEntity entity = new StringEntity(this.dataJson.toString());
         final ProgressDialog loading;
         loading = ProgressDialog.show(FormComissioningAlat2.this,"Fetching Data","Please Wait...",false,false);

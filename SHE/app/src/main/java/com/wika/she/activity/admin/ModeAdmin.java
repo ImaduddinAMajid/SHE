@@ -18,6 +18,11 @@ public class ModeAdmin extends AppCompatActivity {
         setContentView(R.layout.activity_mode_admin);
     }
 
+    public void onInductionClicked(View view) {
+        Intent inductionIntent = new Intent(this, SheIduction.class);
+        startActivity(inductionIntent);
+    }
+
     public void onComissioningClicked(View view) {
         Intent comissionIntent = new Intent(this, FormComissioningAlat.class);
         startActivity(comissionIntent);

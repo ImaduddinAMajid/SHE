@@ -27,7 +27,7 @@ public class SheIduction extends AppCompatActivity implements AdapterView.OnItem
         getSupportActionBar().setSubtitle(R.string.sub_title);
         setContentView(R.layout.activity_she_iduction);
 
-        this.imageButton = (ImageButton)findViewById(R.id.button_image_dokumentasi);
+        this.imageButton = (ImageButton)findViewById(R.id.button_image_foto_peserta);
         this.spinner = (Spinner)findViewById(R.id.spinner_unit_kerja);
         this.spinner.setOnItemSelectedListener(this);
     }
