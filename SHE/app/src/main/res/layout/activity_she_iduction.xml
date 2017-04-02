@@ -180,12 +180,14 @@
                 android:textColor="@color/menu_text_color"
                 android:textSize="@dimen/form_text_konten"/>
 
-        <EditText
-                android:id="@+id/edit_text_unit_kerja_induction"
-                android:layout_weight="1"
+        <Spinner
+                android:id="@+id/spinner_unit_kerja"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/text_unit_kerja_induction"
+                android:layout_weight="1"
+                android:spinnerMode="dialog"
+                android:prompt="@string/spinner_unit_kerja"
+                android:entries="@array/unit_kerja_array"
                 android:textColor="@color/menu_text_color"
                 android:background="@drawable/input_border"/>
 

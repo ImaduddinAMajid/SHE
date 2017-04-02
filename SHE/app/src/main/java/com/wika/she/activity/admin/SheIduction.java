@@ -6,13 +6,17 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import com.wika.she.R;
 
-public class SheIduction extends AppCompatActivity {
+public class SheIduction extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private ImageButton imageButton;
+    private Spinner spinner;
+    private String spinner_item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,8 @@ public class SheIduction extends AppCompatActivity {
         setContentView(R.layout.activity_she_iduction);
 
         this.imageButton = (ImageButton)findViewById(R.id.button_image_dokumentasi);
+        this.spinner = (Spinner)findViewById(R.id.spinner_unit_kerja);
+        this.spinner.setOnItemSelectedListener(this);
     }
 
     @Override
@@ -47,6 +53,16 @@ public class SheIduction extends AppCompatActivity {
     }
 
     public void submit(View view) {
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        this.spinner_item = adapterView.getItemAtPosition(i).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
 }

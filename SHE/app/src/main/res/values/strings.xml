@@ -23,6 +23,7 @@
     <string name="ok">OK</string>
     <string name="spinner_pilihan_user">Pilihan User</string>
     <string name="spinner_pilihan">Pilihan</string>
+    <string name="spinner_unit_kerja">Unit Kerja</string>
 
     <!-- String Comission alat 1-->
     <string name="text_form_com_alat">ADMIN > COMISSIONING ALAT</string>
@@ -140,4 +141,12 @@
         <item>TRUCK TANGKI</item>
     </string-array>
 
+    <!-- Spinner unit kerja -->
+    <string-array name="unit_kerja_array">
+        <item>Karyawan Wika</item>
+        <item>Operator Wika</item>
+        <item>Harian Wika</item>
+        <item>Pekerja Mandor</item>
+        <item>Subkontraktor</item>
+    </string-array>
 </resources>
