@@ -1,4 +1,4 @@
-package com.wika.she.util;
+package com.wika.she.adapter;
 
 import android.app.Activity;
 import android.content.Context;
