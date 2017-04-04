@@ -143,6 +143,7 @@
 
     <!-- Spinner unit kerja -->
     <string-array name="unit_kerja_array">
+        <item>Unit Kerja</item>
         <item>Karyawan Wika</item>
         <item>Operator Wika</item>
         <item>Harian Wika</item>

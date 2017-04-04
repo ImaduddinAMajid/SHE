@@ -1,25 +1,27 @@
 package com.wika.she.activity.pelaksana;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 import com.wika.she.R;
 import com.wika.she.model.Pegawai;
 import com.wika.she.util.MultiSpinner;
 import com.wika.she.util.MultiSpinnerListener;
-import com.wika.she.util.SpinnerAdapter;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.TreeMap;
 
-public class PengajuanIjinKerja1 extends AppCompatActivity {
+public class PengajuanIjinKerja1 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     final TreeMap<String, Boolean> list = new TreeMap<>();
+    private Spinner spinnerPegawai;
+    private String spinnerItemPegawai;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +55,11 @@ public class PengajuanIjinKerja1 extends AppCompatActivity {
         list.add(this.getPegawai("Joni"));
         list.add(this.getPegawai("Jono"));
 
-        Spinner spinnerPegawai = (Spinner) findViewById(R.id.spinner_pekerja);
-        SpinnerAdapter adapter = new SpinnerAdapter(this, R.layout.text_img_for_spinner,R.id.txt,list);
-        spinnerPegawai.setAdapter(adapter);
+        this.spinnerPegawai = (Spinner) findViewById(R.id.spinner_pekerja);
+        this.spinnerPegawai.setOnItemSelectedListener(this);
+        this.spinnerPegawai.setSelection(0);
+//        SpinnerAdapter adapter = new SpinnerAdapter(this, R.layout.text_img_for_spinner,R.id.txt,list);
+//        spinnerPegawai.setAdapter(adapter);
     }
 
     public void onCheckboxClicked(View view) {
@@ -122,5 +126,21 @@ public class PengajuanIjinKerja1 extends AppCompatActivity {
                 "WIKA",
                 "MANAGER",
                 R.drawable.pegawai);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        if (i > 0) {
+            this.spinnerItemPegawai = adapterView.getItemAtPosition(i).toString();
+
+            Intent pengjuanIjinKerja3Intent = new Intent(this, PengajuanIjinKerja3.class);
+            pengjuanIjinKerja3Intent.putExtra("unit_kerja", this.spinnerItemPegawai);
+            startActivity(pengjuanIjinKerja3Intent);
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }

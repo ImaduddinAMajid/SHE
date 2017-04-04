@@ -244,6 +244,7 @@
                     android:layout_height="wrap_content"
                     android:spinnerMode="dialog"
                     android:prompt="@string/text_pekerja"
+                    android:entries="@array/unit_kerja_array"
                     android:textColor="@color/menu_text_color"
                     android:background="@drawable/input_border"/>
         </LinearLayout>

@@ -38,6 +38,8 @@
                 android:screenOrientation="landscape"/>
         <activity android:name=".activity.admin.SheIduction">
         </activity>
+        <activity android:name=".activity.pelaksana.PengajuanIjinKerja3">
+        </activity>
     </application>
 
 </manifest>
