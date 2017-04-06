@@ -1,38 +1,51 @@
 package com.wika.she.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.*;
 import com.wika.she.R;
 import com.wika.she.activity.pelaksana.PengajuanIjinKerja1;
-import com.wika.she.model.PersetujuanIjinKerja;
+import com.wika.she.model.PersetujuanIjinKerjaModel;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class PersetujuanIjinKerjaAdapter extends ArrayAdapter<com.wika.she.model.PersetujuanIjinKerja> {
+public class PersetujuanIjinKerjaAdapter extends BaseAdapter {
     private int groupid;
-    private ArrayList<PersetujuanIjinKerja> list;
+    private ArrayList<PersetujuanIjinKerjaModel> list;
     private LayoutInflater inflater;
     private Activity context;
 
-    public PersetujuanIjinKerjaAdapter(Activity context, int groupid, int id, ArrayList<PersetujuanIjinKerja> list){
-        super(context,id,list);
+    public PersetujuanIjinKerjaAdapter(Activity context, ArrayList<PersetujuanIjinKerjaModel> list){
+//        super(context,id,list);
         this.context = context;
         this.list = list;
-        this.inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        this.groupid = groupid;
+//        this.inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//        this.groupid = groupid;
+    }
+
+    @Override
+    public int getCount() {
+        return list.size();
+    }
+
+    @Override
+    public Object getItem(int i) {
+        return i;
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return i;
     }
 
     public View getView(final int position, View convertView, final ViewGroup parent ){
-        View itemView = inflater.inflate(groupid,parent,false);
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View itemView = inflater.inflate(R.layout.list_persetujuan_ijin_kerja, null);
 
         TextView textViewDiajukanOleh = (TextView) itemView.findViewById(R.id.text_view_diajukan_oleh);
         textViewDiajukanOleh.setText(list.get(position).getDiajukanOleh());
@@ -57,6 +70,13 @@ public class PersetujuanIjinKerjaAdapter extends ArrayAdapter<com.wika.she.model
         });
 
         //TODO: Handle toggle button
+        ToggleButton toggleButton = (ToggleButton)itemView.findViewById(R.id.toggle_button);
+        toggleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((ListView) parent).performItemClick(view, position, 0);
+            }
+        });
 
         return itemView;
     }

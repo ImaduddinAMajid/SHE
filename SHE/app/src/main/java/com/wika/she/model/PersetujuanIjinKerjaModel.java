@@ -3,17 +3,17 @@ package com.wika.she.model;
 import android.widget.Button;
 import android.widget.ToggleButton;
 
-public class PersetujuanIjinKerja {
+public class PersetujuanIjinKerjaModel {
     private String diajukanOleh;
     private String tanggal;
     private Button detailButton;
     private ToggleButton toggleButton;
 
-    public PersetujuanIjinKerja(String diajukanOleh, String tanggal, Button detailButton, ToggleButton toggleButton) {
+    public PersetujuanIjinKerjaModel(String diajukanOleh, String tanggal) {
         this.diajukanOleh = diajukanOleh;
         this.tanggal = tanggal;
-        this.detailButton = detailButton;
-        this.toggleButton = toggleButton;
+//        this.detailButton = detailButton;
+//        this.toggleButton = toggleButton;
     }
 
     public String getDiajukanOleh() {
