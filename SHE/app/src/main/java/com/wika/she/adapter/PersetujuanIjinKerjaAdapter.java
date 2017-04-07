@@ -70,11 +70,13 @@ public class PersetujuanIjinKerjaAdapter extends BaseAdapter {
         });
 
         //TODO: Handle toggle button
-        ToggleButton toggleButton = (ToggleButton)itemView.findViewById(R.id.toggle_button);
-        toggleButton.setOnClickListener(new View.OnClickListener() {
+        CheckBox checkBox = (CheckBox) itemView.findViewById(R.id.checkbox_persetujuan);
+        checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((ListView) parent).performItemClick(view, position, 0);
+//                ((ListView) parent).performItemClick(view, position, 0);
+                boolean isSelected = ((CheckBox) view).isChecked();
+                list.get(position).setSelected(isSelected);
             }
         });
 
@@ -83,5 +85,15 @@ public class PersetujuanIjinKerjaAdapter extends BaseAdapter {
 
     public View getDropDownView(int position, View convertView, ViewGroup parent){
         return getView(position,convertView,parent);
+    }
+
+    public ArrayList<PersetujuanIjinKerjaModel> getPengajuanIjinKerja() {
+        ArrayList<PersetujuanIjinKerjaModel> list = new ArrayList<>();
+        for(int i = 0; i < this.list.size(); i++) {
+            if(this.list.get(i).isSelected()) {
+                list.add(this.list.get(i));
+            }
+        }
+        return list;
     }
 }

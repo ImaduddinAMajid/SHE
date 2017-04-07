@@ -1,19 +1,13 @@
 package com.wika.she.model;
 
-import android.widget.Button;
-import android.widget.ToggleButton;
-
 public class PersetujuanIjinKerjaModel {
     private String diajukanOleh;
     private String tanggal;
-    private Button detailButton;
-    private ToggleButton toggleButton;
+    private boolean selected;
 
     public PersetujuanIjinKerjaModel(String diajukanOleh, String tanggal) {
         this.diajukanOleh = diajukanOleh;
         this.tanggal = tanggal;
-//        this.detailButton = detailButton;
-//        this.toggleButton = toggleButton;
     }
 
     public String getDiajukanOleh() {
@@ -32,19 +26,11 @@ public class PersetujuanIjinKerjaModel {
         this.tanggal = tanggal;
     }
 
-    public Button getDetailButton() {
-        return detailButton;
+    public boolean isSelected() {
+        return selected;
     }
 
-    public void setDetailButton(Button detailButton) {
-        this.detailButton = detailButton;
-    }
-
-    public ToggleButton getToggleButton() {
-        return toggleButton;
-    }
-
-    public void setToggleButton(ToggleButton toggleButton) {
-        this.toggleButton = toggleButton;
+    public void setSelected(boolean selected) {
+        this.selected = selected;
     }
 }

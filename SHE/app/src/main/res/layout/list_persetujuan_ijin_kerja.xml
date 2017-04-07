@@ -18,6 +18,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/text_tanggal_pengajuan"
             android:textColor="@color/menu_text_color"
             android:textSize="@dimen/form_text_konten"/>
@@ -27,16 +28,23 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:text="DETAIL"
             android:focusable="false"/>
 
-    <ToggleButton
-            android:id="@+id/toggle_button"
-            android:layout_width="wrap_content"
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textOn="Yes"
-            android:textOff="No"
-            android:onClick="onToggleClicked"/>
+            android:gravity="center">
+        <CheckBox
+                android:id="@+id/checkbox_persetujuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:onClick="onCheckboxClickedClicked"
+                android:gravity="center"/>
+    </LinearLayout>
 </LinearLayout>

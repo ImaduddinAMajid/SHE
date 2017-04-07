@@ -3,7 +3,6 @@ package com.wika.she.activity.admin;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.wika.she.R;
@@ -12,7 +11,7 @@ import com.wika.she.model.PersetujuanIjinKerjaModel;
 
 import java.util.ArrayList;
 
-public class PersetujuanIjinKerja extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class PersetujuanIjinKerja extends AppCompatActivity {
 
     private ListView listView;
     private String test;
@@ -40,12 +39,8 @@ public class PersetujuanIjinKerja extends AppCompatActivity implements AdapterVi
                 "11/2/1993");
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        long viewId = view.getId();
-
-        if (viewId == R.id.toggle_button) {
-            Toast.makeText(this, i, Toast.LENGTH_SHORT).show();
-        }
+    public void onSendClicked(View view) {
+        ArrayList<PersetujuanIjinKerjaModel> ijinKerjaList = ((PersetujuanIjinKerjaAdapter)this.listView.getAdapter()).getPengajuanIjinKerja();
+        Toast.makeText(PersetujuanIjinKerja.this, ""+ijinKerjaList.get(0).getDiajukanOleh()+" "+ijinKerjaList.get(1).getDiajukanOleh(), Toast.LENGTH_LONG).show();
     }
 }

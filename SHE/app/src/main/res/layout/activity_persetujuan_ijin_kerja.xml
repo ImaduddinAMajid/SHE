@@ -40,6 +40,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/text_tanggal_pengajuan"
                 android:textColor="@color/menu_text_color"
                 android:textSize="@dimen/form_text_konten"/>
@@ -56,6 +57,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/text_persetujuan"
                 android:textColor="@color/menu_text_color"
                 android:textSize="@dimen/form_text_konten"/>
@@ -66,6 +68,47 @@
     <ListView
             android:id="@+id/list_ijin_kerja"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:focusable="true"></ListView>
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:layout_weight="1"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/button_cancel"
+                android:layout_toLeftOf="@+id/button_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/button_refresh"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="CANCEL"
+                android:textSize="18sp"
+                android:onClick="onCancelClicked"/>
+
+        <Button
+                android:id="@+id/button_refresh"
+                android:layout_toLeftOf="@+id/button_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/button_ok"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="REFRESH"
+                android:textSize="18sp"
+                android:onClick="onRefreshClicked"/>
+
+        <Button
+                android:id="@+id/button_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:layout_alignParentRight="true"
+                android:text="OK"
+                android:textSize="18sp"
+                android:onClick="onSendClicked"/>
+    </RelativeLayout>
 </LinearLayout>
