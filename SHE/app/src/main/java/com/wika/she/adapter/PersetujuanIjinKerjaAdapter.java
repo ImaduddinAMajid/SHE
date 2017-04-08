@@ -15,17 +15,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class PersetujuanIjinKerjaAdapter extends BaseAdapter {
-    private int groupid;
     private ArrayList<PersetujuanIjinKerjaModel> list;
-    private LayoutInflater inflater;
     private Activity context;
 
     public PersetujuanIjinKerjaAdapter(Activity context, ArrayList<PersetujuanIjinKerjaModel> list){
-//        super(context,id,list);
         this.context = context;
         this.list = list;
-//        this.inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//        this.groupid = groupid;
     }
 
     @Override
@@ -69,12 +64,10 @@ public class PersetujuanIjinKerjaAdapter extends BaseAdapter {
             }
         });
 
-        //TODO: Handle toggle button
         CheckBox checkBox = (CheckBox) itemView.findViewById(R.id.checkbox_persetujuan);
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                ((ListView) parent).performItemClick(view, position, 0);
                 boolean isSelected = ((CheckBox) view).isChecked();
                 list.get(position).setSelected(isSelected);
             }

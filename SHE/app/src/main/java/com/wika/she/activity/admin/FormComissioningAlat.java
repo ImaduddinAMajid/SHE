@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import com.wika.she.R;
+import com.wika.she.util.Constants;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -41,16 +42,16 @@ public class FormComissioningAlat extends AppCompatActivity implements AdapterVi
 
     public void next(View view) throws JSONException {
         JSONObject dataJson = new JSONObject();
-        dataJson.put("jenisAlat", this.spinner_item);
-        dataJson.put("tanggal", this.editTextTanggal.getText().toString());
-        dataJson.put("tipe", this.editTextTipe.getText().toString());
-        dataJson.put("noIdentitas", this.editTextNoIdentitas.getText().toString());
-        dataJson.put("pemilik", this.editTextPemilik.getText().toString());
-        dataJson.put("operator", this.editTextOperator.getText().toString());
-        dataJson.put("catatan", this.editTextCatatan.getText().toString());
+        dataJson.put(Constants.JENIS_ALAT, this.spinner_item);
+        dataJson.put(Constants.TANGGAL, this.editTextTanggal.getText().toString());
+        dataJson.put(Constants.TIPE, this.editTextTipe.getText().toString());
+        dataJson.put(Constants.NO_IDENTITAS, this.editTextNoIdentitas.getText().toString());
+        dataJson.put(Constants.PEMILIK, this.editTextPemilik.getText().toString());
+        dataJson.put(Constants.OPERATOR, this.editTextOperator.getText().toString());
+        dataJson.put(Constants.CATATAN, this.editTextCatatan.getText().toString());
 
         Intent comissionIntent2 = new Intent(this, FormComissioningAlat2.class);
-        comissionIntent2.putExtra("data", dataJson.toString());
+        comissionIntent2.putExtra(Constants.DATA, dataJson.toString());
         startActivity(comissionIntent2);
     }
 

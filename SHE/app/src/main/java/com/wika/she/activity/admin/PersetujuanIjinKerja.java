@@ -4,17 +4,19 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
 import com.wika.she.R;
 import com.wika.she.adapter.PersetujuanIjinKerjaAdapter;
 import com.wika.she.model.PersetujuanIjinKerjaModel;
+import com.wika.she.util.Constants;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 public class PersetujuanIjinKerja extends AppCompatActivity {
 
     private ListView listView;
-    private String test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +41,21 @@ public class PersetujuanIjinKerja extends AppCompatActivity {
                 "11/2/1993");
     }
 
-    public void onSendClicked(View view) {
+    public void onSendClicked(View view) throws JSONException {
+        JSONArray jsonArray = new JSONArray();
+
         ArrayList<PersetujuanIjinKerjaModel> ijinKerjaList = ((PersetujuanIjinKerjaAdapter)this.listView.getAdapter()).getPengajuanIjinKerja();
-        Toast.makeText(PersetujuanIjinKerja.this, ""+ijinKerjaList.get(0).getDiajukanOleh()+" "+ijinKerjaList.get(1).getDiajukanOleh(), Toast.LENGTH_LONG).show();
+        for(PersetujuanIjinKerjaModel ijinKerja : ijinKerjaList) {
+            JSONObject ijinKerjaJSON = new JSONObject();
+            ijinKerjaJSON.put(Constants.DIAJUKAN_OLEH, ijinKerja.getDiajukanOleh());
+            ijinKerjaJSON.put(Constants.TANGGAL, ijinKerja.getTanggal());
+            jsonArray.put(ijinKerjaJSON);
+        }
+
+        JSONObject ijinKerjaArray = new JSONObject();
+        ijinKerjaArray.put(Constants.IJIN_KERJA, jsonArray);
+
+        String str = ijinKerjaArray.toString();
+        System.out.println(str);
     }
 }

@@ -13,9 +13,87 @@
         tools:context="com.wika.she.activity.pelaksana.PengajuanIjinKerja3"
         android:background="@color/head_bg">
 
+    <!-- JUDUL -->
+    <TextView
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_form_peng_ijker"
+            android:textStyle="bold"
+            android:textSize="@dimen/form_text_judul"
+            android:textColor="@color/menu_text_color"/>
+
     <TextView
             android:id="@+id/judul"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/text_diajukan_oleh_persetujuan"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/form_text_konten"/>
+
+    <!-- SUB JUDUL -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp">
+
+
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="NAMA"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="JABATAN"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/form_text_konten"/>
+
+    </LinearLayout>
+
+    <!-- LIST -->
+    <ListView
+            android:id="@+id/list_pengajuan_ijin_kerja"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:layout_weight="1"/>
+
+    <!-- BUTTON -->
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/button_kembali"
+                android:layout_toLeftOf="@+id/button_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/button_submit"
+                android:gravity="center"
+                android:text="KEMBALI"
+                android:textSize="18sp"
+                android:onClick="onKembaliClicked"/>
+
+        <Button
+                android:id="@+id/button_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:layout_alignParentRight="true"
+                android:text="SUBMIT"
+                android:textSize="18sp"
+                android:onClick="onSubmitClicked"/>
+    </RelativeLayout>
 
 </LinearLayout>
