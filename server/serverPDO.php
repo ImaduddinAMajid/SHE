@@ -22,8 +22,7 @@ switch($operation){
         $fotoPeserta = $obj -> fotoPeserta;
 
         if(!empty($namaPekerja)){
-            $sql = "INSERT INTO Pekerja (pekerjaId, namaPekerja, tanggal, telepon, jabatan, unitKerja, noKTP, fotoPeserta) 
-VALUES (?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO Pekerja (pekerjaId, namaPekerja, tanggal, telepon, jabatan, unitKerja, noKTP, fotoPeserta) VALUES (?,?,?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($pekerjaId, $namaPekerja, $tanggal, $telepon, $jabatan, $unitKerja, $noKTP, $fotoPeserta));
             $data = '{"status":"success"}';
@@ -53,8 +52,7 @@ VALUES (?,?,?,?,?,?,?,?)";
         $dokumentasi=$obj->dokumentasi;
 
         if(!empty($namaKorban)){
-            $sql = "INSERT INTO Insiden (namaKorban, TTLKorban, jabatan, unitKerja, tipeInsiden, kronologi, saksiKejadian, waktuKejadian, akibatInsiden, estimasiKerugian, dokumentasi)
-VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO Insiden (namaKorban, TTLKorban, jabatan, unitKerja, tipeInsiden, kronologi, saksiKejadian, waktuKejadian, akibatInsiden, estimasiKerugian, dokumentasi) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($namaKorban,$TTLKorban,$jabatan, $unitKerja, $tipeInsiden, $kronologi, $saksiKejadian, $waktuKejadian, $akibatInsiden, $estimasiKerugian, $dokumentasi));
             $data = '{"status":"success"}';
@@ -121,10 +119,9 @@ VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         $persetujuan =              $obj->persetujuan;
 
         if(!empty($pengaju)){
-            $sql = "INSERT INTO Ijin_Kerja (pengaju, tanggal, lokasiKerja, lingkupKerja, jamKerja, kebutuhanAlatBerat, pekerjaTerlibat, kelengkapanKeselamatan, persetujuan)
- VALUES(?,?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO Ijin_Kerja (pengaju, tanggal, lokasiKerja, lingkupKerja, jamKerja, kebutuhanAlatBerat, pekerjaTerlibat, kelengkapanKeselamatan, perlengkapanKerja, izinKerjaKhusus, catatan, persetujuan) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($pengaju, $tanggal, $lokasiKerja,$lingkupKerja,$jamKerja,$kebutuhanAlatBerat,$pekerjaTerlibat,$kelengkapanKeselamatan,$persetujuan));
+            $q->execute(array($pengaju, $tanggal, $lokasiKerja,$lingkupKerja,$jamKerja,$kebutuhanAlatBerat,$pekerjaTerlibat,$kelengkapanKeselamatan, $perlengkapanKerja, $izinKerjaKhusus, $catatan, $persetujuan));
             $data = '{"status":"success"}';
 
         }
@@ -151,6 +148,22 @@ VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         }
 
         break;
+    case list_pengajuan_ijin_by_tanggal:
+        /*Source code for showing data of Ijin_Kerja table*/
+        $json = file_get_contents('php://input');
+        $obj = json_decode($json);
+        $tanggal = $obj->tanggal;
+
+        if(!empty($pengaju)){
+            $sql = "SELECT * FROM Ijin_Kerja WHERE  tanggal = ?";
+            $q = $pdo->prepare($sql);
+            $q->execute(array($tanggal));
+            $data = json_encode($q->fetchAll(PDO::FETCH_ASSOC));
+            echo $data;
+        }
+
+        break;
+
 
     case alat_berat:
         /*Source code for inserting data to Alat_Berat table*/
@@ -169,7 +182,7 @@ VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         $fotoKiri = $obj->fotoKiri;
 
         if(!empty($jenisAlat)){
-            $sql = "INSERT INTO Alat_Berat (jenisAlat, tanggal, tipe, noIdentitas, pemilik, operator, catatan, fotoDepan, fotoBelakang, fotoKanan, fotoKiri) 
+            $sql = "INSERT INTO Alat_Berat (jenisAlat, tanggal, tipe, noIdentitas, pemilik, operator, catatan, fotoDepan, fotoBelakang, fotoKanan, fotoKiri)
 VALUES(?,?,?,?,?,?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($jenisAlat,$tanggal,$tipe,$noIdentitas,$pemilik,$operator,$catatan,$fotoDepan,$fotoBelakang,$fotoKanan,$fotoKiri));
@@ -219,4 +232,3 @@ VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 }
 
 Database::disconnect();
-
