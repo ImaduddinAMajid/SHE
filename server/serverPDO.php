@@ -12,7 +12,6 @@ switch($operation){
     case induction:
         $json = file_get_contents('php://input');
         $obj = json_decode($json);
-        $pekerjaId = $obj -> pekerjaId;
         $namaPekerja = $obj -> namaPekerja;
         $tanggal = $obj -> tanggal;
         $telepon = $obj -> telepon;
@@ -22,9 +21,9 @@ switch($operation){
         $fotoPeserta = $obj -> fotoPeserta;
 
         if(!empty($namaPekerja)){
-            $sql = "INSERT INTO Pekerja (pekerjaId, namaPekerja, tanggal, telepon, jabatan, unitKerja, noKTP, fotoPeserta) VALUES (?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO Pekerja (namaPekerja, tanggal, telepon, jabatan, unitKerja, noKTP, fotoPeserta) VALUES (?,?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($pekerjaId, $namaPekerja, $tanggal, $telepon, $jabatan, $unitKerja, $noKTP, $fotoPeserta));
+            $q->execute(array($namaPekerja, $tanggal, $telepon, $jabatan, $unitKerja, $noKTP, $fotoPeserta));
             $data = '{"status":"success"}';
         }
 
