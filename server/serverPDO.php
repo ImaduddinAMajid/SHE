@@ -154,7 +154,7 @@ switch($operation){
         $obj = json_decode($json);
         $tanggal = $obj->tanggal;
 
-        if(!empty($pengaju)){
+        if(!empty($tanggal)){
             $sql = "SELECT * FROM Ijin_Kerja WHERE  tanggal = ?";
             $q = $pdo->prepare($sql);
             $q->execute(array($tanggal));
