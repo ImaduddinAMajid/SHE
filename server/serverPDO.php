@@ -47,13 +47,14 @@ switch($operation){
         $saksiKejadian=$obj->saksiKejadian;
         $waktuKejadian=$obj->waktuKejadian;
         $akibatInsiden=$obj->akibatInsiden;
-        $estimasiKerugian=$obj->estimasiKerugian;
+        $kerugianWaktu=$obj->kerugianWaktu;
+        $kerugianMaterial=$obj->kerugianMaterial;
         $dokumentasi=$obj->dokumentasi;
 
         if(!empty($namaKorban)){
-            $sql = "INSERT INTO Insiden (namaKorban, TTLKorban, jabatan, unitKerja, tipeInsiden, kronologi, saksiKejadian, waktuKejadian, akibatInsiden, estimasiKerugian, dokumentasi) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO Insiden (namaKorban, TTLKorban, jabatan, unitKerja, tipeInsiden, kronologi, saksiKejadian, waktuKejadian, akibatInsiden, kerugianWaktu, kerugianMaterial, dokumentasi) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($namaKorban,$TTLKorban,$jabatan, $unitKerja, $tipeInsiden, $kronologi, $saksiKejadian, $waktuKejadian, $akibatInsiden, $estimasiKerugian, $dokumentasi));
+            $q->execute(array($namaKorban,$TTLKorban,$jabatan, $unitKerja, $tipeInsiden, $kronologi, $saksiKejadian, $waktuKejadian, $akibatInsiden, $kerugianWaktu, $kerugianMaterial, $dokumentasi));
             $data = '{"status":"success"}';
         }
 
@@ -84,6 +85,37 @@ switch($operation){
 
     case persetujuan_ijin:
         $json = file_get_contents('php://input');
+        $jsonIterator = new RecursiveIteratorIterator(
+    new RecursiveArrayIterator(json_decode($json, TRUE)),
+    RecursiveIteratorIterator::SELF_FIRST);
+
+        foreach ($jsonIterator as $key => $val) {
+        if(!is_array($val)){
+
+            if($key == 'pengaju') $pengaju = $val;
+
+            elseif ($key == 'tanggal') $tanggal = $val;
+
+            if(!empty($pengaju) && !empty($tanggal)){
+
+                if(!empty($pengaju)){
+                        $sql = "UPDATE Ijin_Kerja SET persetujuan = '1' WHERE pengaju = ? AND tanggal = ?";
+                        $q = $pdo->prepare($sql);
+                        $q->execute(array($pengaju,$tanggal));
+                        $data = '{"status":"success"}';
+                    }
+
+                else $data = '{"status":"failed"}';
+
+                    
+            }
+        }
+        else{
+            $pengaju = null;
+            $tanggal = null;
+        }
+        }
+        /*
         $obj = json_decode($json);
         $pengaju = $obj->pengaju;
         $tanggal = $obj->tanggal;
@@ -97,7 +129,9 @@ switch($operation){
         else $data = '{"status":"failed"}';
 
         echo $data;
-
+        */
+        echo $data;
+        
         break;
 
     case pengajuan_ijin:
