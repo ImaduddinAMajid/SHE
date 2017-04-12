@@ -173,11 +173,22 @@ switch($operation){
         $tanggal = $obj->tanggal;
 
         if(!empty($pengaju)){
+            
             $sql = "SELECT * FROM Ijin_Kerja WHERE  pengaju = ? AND tanggal = ?";
             $q = $pdo->prepare($sql);
             $q->execute(array($pengaju,$tanggal));
-            $data = json_encode($q->fetchAll(PDO::FETCH_ASSOC));
-            echo $data;
+            $data = $q->fetchAll(PDO::FETCH_ASSOC);
+            $i = 0;
+            
+            foreach ($data as $key ) {
+                # code...
+
+                $data[$i][persetujuan] = ($data[$i][persetujuan] == 0) ? 'false' : 'true';
+                $i++;
+            }
+            
+            $jsonData = json_encode($data);
+            echo $jsonData;
         }
 
         break;
