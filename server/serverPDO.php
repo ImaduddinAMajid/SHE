@@ -58,7 +58,7 @@ switch($operation){
             $data = '{"status":"success"}';
         }
 
-        else $data = '{"status":"success"}';
+        else $data = '{"status":"failed"}';
 
         echo $data;
 
@@ -183,7 +183,7 @@ switch($operation){
             foreach ($data as $key ) {
                 # code...
 
-                $data[$i][persetujuan] = ($data[$i][persetujuan] == 0) ? 'false' : 'true';
+                $data[$i][persetujuan] = ($data[$i][persetujuan] == 0) ? false : true;
                 $i++;
             }
             
