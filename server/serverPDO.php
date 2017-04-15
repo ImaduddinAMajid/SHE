@@ -18,12 +18,11 @@ switch($operation){
         $jabatan = $obj -> jabatan;
         $unitKerja = $obj -> unitKerja;
         $noKTP = $obj -> noKTP;
-        $fotoPeserta = $obj -> fotoPeserta;
 
         if(!empty($namaPekerja)){
-            $sql = "INSERT INTO Pekerja (namaPekerja, tanggal, telepon, jabatan, unitKerja, noKTP, fotoPeserta) VALUES (?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO Pekerja (namaPekerja, tanggal, telepon, jabatan, unitKerja, noKTP) VALUES (?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($namaPekerja, $tanggal, $telepon, $jabatan, $unitKerja, $noKTP, $fotoPeserta));
+            $q->execute(array($namaPekerja, $tanggal, $telepon, $jabatan, $unitKerja, $noKTP));
             $data = '{"status":"success"}';
         }
 
@@ -86,8 +85,7 @@ switch($operation){
     case persetujuan_ijin:
         $json = file_get_contents('php://input');
         $jsonIterator = new RecursiveIteratorIterator(
-    new RecursiveArrayIterator(json_decode($json, TRUE)),
-    RecursiveIteratorIterator::SELF_FIRST);
+        new RecursiveArrayIterator(json_decode($json, TRUE)), RecursiveIteratorIterator::SELF_FIRST);
 
         foreach ($jsonIterator as $key => $val) {
         if(!is_array($val)){
@@ -192,6 +190,7 @@ switch($operation){
         }
 
         break;
+
     case list_pengajuan_ijin_by_tanggal:
         /*Source code for showing data of Ijin_Kerja table*/
         $json = file_get_contents('php://input');
@@ -207,7 +206,6 @@ switch($operation){
         }
 
         break;
-
 
     case alat_berat:
         /*Source code for inserting data to Alat_Berat table*/
@@ -226,8 +224,7 @@ switch($operation){
         $fotoKiri = $obj->fotoKiri;
 
         if(!empty($jenisAlat)){
-            $sql = "INSERT INTO Alat_Berat (jenisAlat, tanggal, tipe, noIdentitas, pemilik, operator, catatan, fotoDepan, fotoBelakang, fotoKanan, fotoKiri)
-VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO Alat_Berat (jenisAlat, tanggal, tipe, noIdentitas, pemilik, operator, catatan, fotoDepan, fotoBelakang, fotoKanan, fotoKiri) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($jenisAlat,$tanggal,$tipe,$noIdentitas,$pemilik,$operator,$catatan,$fotoDepan,$fotoBelakang,$fotoKanan,$fotoKiri));
             $data = '{"status":"success"}';
@@ -269,7 +266,66 @@ VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 
         break;
 
+    case upload_foto:
+        @$src = $_GET['from'];
+        switch ($src) {
+            case induction:
+                $json = file_get_contents('php://input');
+                $obj = json_decode($json);
+                $namaPekerja = $obj -> namaPekerja;
+                $tanggal = $obj -> tanggal;
+                $folder = "uploads/induction/";
+                @$img = $_GET['image'];
+                if(isset($img)){
+                    $upload_img = $folder . $img; 
+                    $sql = "UPDATE Pekerja SET fotoPeserta = ? WHERE namaPekerja = ? AND tanggal = ?";
+                    $q = $pdo->prepare($sql);
+                    $q->execute(array($upload_img, $namaPekerja, $tanggal));
+                    $data = '{"status":"success"}';
+                }
+                
+                else {
+                    $data = '{"status":"failed"}';
+                }
 
+                echo $data;
+                break;
+            
+            case alat_berat:
+                # code...
+                break;
+
+            case insiden:
+                # code...
+                break;
+
+            default:
+                # code...
+                break;
+        }
+        break;
+
+    case download_foto:
+        @$src = $_GET['from'];
+        switch ($src) {
+            case induction:
+                # code...
+                break;
+
+            case alat_berat:
+                # code...
+                break;
+            
+            case insiden:
+                # code...
+                break;
+
+            default:
+                # code...
+                break;
+        }
+        break;
+    
     default:
         break;
 
