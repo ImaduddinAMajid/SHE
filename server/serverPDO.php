@@ -276,10 +276,7 @@ switch($operation){
                 if(isset($_FILES['image'])){
                     
                     $folder = "uploads/induction/";
-                    $serverIp = gethostbyname(gethostname());
-                    $fileUpload = 'https://'. $serverIp . '/' . 'jsonCRUD' . '/' . $folder;
                     $uploadImg = $folder . basename($_FILES['image']['name']);
-                    $filelink = $fileUpload . basename($_FILES['image']['name']);
                     
                     if(!move_uploaded_file($_FILES['image']['tmp_name'], $uploadImg)){
                         $data = '{"status":"failed"}';
@@ -298,10 +295,7 @@ switch($operation){
                 if(isset($_FILES['image'])){
                     
                     $folder = "uploads/alat_berat/";
-                    $serverIp = gethostbyname(gethostname());
-                    $fileUpload = 'https://'. $serverIp . '/' . 'jsonCRUD' . '/' . $folder;
                     $uploadImg = $folder . basename($_FILES['image']['name']);
-                    $filelink = $fileUpload . basename($_FILES['image']['name']);
                     
                     if(!move_uploaded_file($_FILES['image']['tmp_name'], $uploadImg)){
                         $data = '{"status":"failed"}';
@@ -321,10 +315,7 @@ switch($operation){
                 if(isset($_FILES['image'])){
                     
                     $folder = "uploads/insiden/";
-                    $serverIp = gethostbyname(gethostname());
-                    $fileUpload = 'https://'. $serverIp . '/' . 'jsonCRUD' . '/' . $folder;
                     $uploadImg = $folder . basename($_FILES['image']['name']);
-                    $filelink = $fileUpload . basename($_FILES['image']['name']);
                     
                     if(!move_uploaded_file($_FILES['image']['tmp_name'], $uploadImg)){
                         $data = '{"status":"failed"}';
@@ -340,34 +331,76 @@ switch($operation){
                 break;
 
             default:
-                $data = '{"status":"failed"}';
+                echo '{"status":"failed"}';
                 break;
         }
         break;
 
-    case download_foto:
-        @$src = $_GET['from'];
-        switch ($src) {
-            case induction:
-                
+    case export_laporan:
+        
+        $folder = "laporan/";
+        $sql = "SELECT pekerjaId, namaPekerja, fotoPeserta, tanggal, jabatan, unitKerja  FROM Pekerja ORDER BY pekerjaId";
+        $result = $pdo->query($sql);
+        $filename = $folder."excel-induction".".xlsx";
+        $handle = fopen($filename, 'w+');
+        fputcsv($handle, array('No','Nama Peserta','Foto Peserta','Tanggal Induksi', 'Jabatan', 'Unit Kerja'));
 
-                break;
+        foreach ($result as $row) {
+            fputcsv($handle, array($row['pekerjaId'], $row['namaPekerja'],$row['fotoPeserta'],$row['tanggal'],$row['jabatan'],$row['unitKerja']));
 
-            case alat_berat:
-                # code...
-                break;
-            
-            case insiden:
-                # code...
-                break;
-
-            default:
-                # code...
-                break;
         }
+
+        if(fclose($handle)) $data = '{"status":"success"}';
+        else $data = '{"status":"failed"}';
+
+        $sql = "SELECT no, jenisAlat, tanggal, tipe, noIdentitas, pemilik, operator, catatan, fotoDepan, fotoKiri, fotoKanan, fotoBelakang FROM Alat_Berat ORDER BY no";
+        $result = $pdo->query($sql);
+        $filename = $folder."excel-alat-berat".".xlsx";
+        $handle = fopen($filename, 'w+');
+        fputcsv($handle, array('No','Jenis Alat','Tanggal','Tipe', 'No Identitas', 'Pemilik', 'Operator', 'Catatan', 'FOto Depan', 'Foto Kiri', 'Foto Kanan', 'Foto Belakang'));
+
+        foreach ($result as $row) {
+            fputcsv($handle, array($row['no'], $row['jenisAlat'],$row['tanggal'],$row['tipe'],$row['noIdentitas'],$row['pemilik'], $row['pemilik'], $row['operator'],$row['catatan'],$row['fotoDepan'],$row['fotoKiri'],$row['fotoKanan'],$row['fotoBelakang']));
+
+        }
+
+        if(fclose($handle)) $data = '{"status":"success"}';
+        else $data = '{"status":"failed"}';
+        
+        $sql = "SELECT tanggal, pengaju, lokasiKerja, lingkupKerja, jamKerja, kebutuhanAlatBerat, pekerjaTerlibat, izinKerjaKhusus, persetujuan FROM Ijin_Kerja ORDER BY tanggal";
+        $result = $pdo->query($sql);
+        $filename = $folder."excel-pengajuan-ijin".".xlsx";
+        $handle = fopen($filename, 'w+');
+        fputcsv($handle, array('Tanggal','Diajukan Oleh','Lokasi Kerja','Lingkup Kerja', 'Selisih Jam Kerja', 'Daftar Alat Berat', 'Jumlah Pekerja Terlibat', 'Ijin Kerja Khusus', 'Persetujuan'));
+
+        foreach ($result as $row) {
+            fputcsv($handle, array($row['tanggal'], $row['pengaju'],$row['lokasiKerja'],$row['lingkupKerja'],$row['jamKerja'],$row['kebutuhanAlatBerat'], $row['pekerjaTerlibat'], $row['izinKerjaKhusus'],$row['persetujuan']));
+
+        }
+
+        if(fclose($handle)) $data = '{"status":"success"}';
+        else $data = '{"status":"failed"}';
+
+        $sql = "SELECT no, namaKorban, jabatan, unitKerja, tipeInsiden, kronologi, saksiKejadian, waktuKejadian, akibatInsiden, kerugianWaktu, kerugianMaterial, dokumentasi FROM Insiden ORDER BY no";
+        $result = $pdo->query($sql);
+        $filename = $folder."excel-insiden".".xlsx";
+        $handle = fopen($filename, 'w+');
+        fputcsv($handle, array('No','Nama Korban','Pekerjaan','Unit Kerja', 'Tipe Insiden', 'Kronologi', 'Saksi', 'Waktu Terjadi', 'Akibat', 'Kerugian Waktu', 'Kerugian Materil', 'Foto'));
+
+        foreach ($result as $row) {
+            fputcsv($handle, array($row['no'], $row['namaKorban'],$row['jabatan'],$row['unitKerja'],$row['tipeInsiden'],$row['kronologi'], $row['saksiKejadian'], $row['waktuKejadian'],$row['akibatInsiden'],$row['kerugianWaktu'],$row['kerugianMaterial'],$row['dokumentasi']));
+
+        }
+
+        if(fclose($handle)) $data = '{"status":"success"}';
+        else $data = '{"status":"failed"}';
+
+        echo $data;
+
         break;
     
     default:
+        echo '{"status":"failed"}';
         break;
 
 }
