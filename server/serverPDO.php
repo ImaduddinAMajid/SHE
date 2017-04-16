@@ -148,11 +148,12 @@ switch($operation){
         $izinKerjaKhusus =          $obj->izinKerjaKhusus;
         $catatan =                  $obj->catatan;
         $persetujuan =              $obj->persetujuan;
+        $fotoPeserta =              $obj->fotoPeserta;
 
         if(!empty($pengaju)){
-            $sql = "INSERT INTO Ijin_Kerja (pengaju, tanggal, lokasiKerja, lingkupKerja, jamKerja, kebutuhanAlatBerat, pekerjaTerlibat, kelengkapanKeselamatan, perlengkapanKerja, izinKerjaKhusus, catatan, persetujuan) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO Ijin_Kerja (pengaju, tanggal, lokasiKerja, lingkupKerja, jamKerja, kebutuhanAlatBerat, pekerjaTerlibat, kelengkapanKeselamatan, perlengkapanKerja, izinKerjaKhusus, catatan, persetujuan, fotoPeserta) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($pengaju, $tanggal, $lokasiKerja,$lingkupKerja,$jamKerja,$kebutuhanAlatBerat,$pekerjaTerlibat,$kelengkapanKeselamatan, $perlengkapanKerja, $izinKerjaKhusus, $catatan, $persetujuan));
+            $q->execute(array($pengaju, $tanggal, $lokasiKerja,$lingkupKerja,$jamKerja,$kebutuhanAlatBerat,$pekerjaTerlibat,$kelengkapanKeselamatan, $perlengkapanKerja, $izinKerjaKhusus, $catatan, $persetujuan, $fotoPeserta));
             $data = '{"status":"success"}';
 
         }
@@ -270,37 +271,74 @@ switch($operation){
         @$src = $_GET['from'];
         switch ($src) {
             case induction:
-                $json = file_get_contents('php://input');
-                $obj = json_decode($json);
-                $namaPekerja = $obj -> namaPekerja;
-                $tanggal = $obj -> tanggal;
-                $folder = "uploads/induction/";
-                @$img = $_GET['image'];
-                if(isset($img)){
-                    $upload_img = $folder . $img; 
-                    $sql = "UPDATE Pekerja SET fotoPeserta = ? WHERE namaPekerja = ? AND tanggal = ?";
-                    $q = $pdo->prepare($sql);
-                    $q->execute(array($upload_img, $namaPekerja, $tanggal));
+                if(isset($_FILES['image'])){
+                    
+                    $folder = "uploads/induction/";
+                    $serverIp = gethostbyname(gethostname());
+                    $fileUpload = 'https://'. $serverIp . '/' . 'jsonCRUD' . '/' . $folder;
+                    $uploadImg = $folder . basename($_FILES['image']['name']);
+                    $filelink = $fileUpload . basename($_FILES['image']['name']);
+                    
+                    if(!move_uploaded_file($_FILES['image']['tmp_name'], $uploadImg)){
+                        $data = '{"status":"failed"}';
+                    }
+                    
                     $data = '{"status":"success"}';
-                }
-                
-                else {
-                    $data = '{"status":"failed"}';
+                              
                 }
 
+                else $data = '{"status":"failed"}';;
+                
                 echo $data;
                 break;
             
             case alat_berat:
-                # code...
+                if(isset($_FILES['image'])){
+                    
+                    $folder = "uploads/alat_berat/";
+                    $serverIp = gethostbyname(gethostname());
+                    $fileUpload = 'https://'. $serverIp . '/' . 'jsonCRUD' . '/' . $folder;
+                    $uploadImg = $folder . basename($_FILES['image']['name']);
+                    $filelink = $fileUpload . basename($_FILES['image']['name']);
+                    
+                    if(!move_uploaded_file($_FILES['image']['tmp_name'], $uploadImg)){
+                        $data = '{"status":"failed"}';
+                    }
+                    
+                    $data = '{"status":"success"}';
+                              
+                }
+
+                else $data = '{"status":"failed"}';;
+                
+                echo $data;
+
                 break;
 
             case insiden:
-                # code...
+                if(isset($_FILES['image'])){
+                    
+                    $folder = "uploads/insiden/";
+                    $serverIp = gethostbyname(gethostname());
+                    $fileUpload = 'https://'. $serverIp . '/' . 'jsonCRUD' . '/' . $folder;
+                    $uploadImg = $folder . basename($_FILES['image']['name']);
+                    $filelink = $fileUpload . basename($_FILES['image']['name']);
+                    
+                    if(!move_uploaded_file($_FILES['image']['tmp_name'], $uploadImg)){
+                        $data = '{"status":"failed"}';
+                    }
+                    
+                    $data = '{"status":"success"}';
+                              
+                }
+
+                else $data = '{"status":"failed"}';;
+                
+                echo $data;
                 break;
 
             default:
-                # code...
+                $data = '{"status":"failed"}';
                 break;
         }
         break;
@@ -309,7 +347,8 @@ switch($operation){
         @$src = $_GET['from'];
         switch ($src) {
             case induction:
-                # code...
+                
+
                 break;
 
             case alat_berat:
