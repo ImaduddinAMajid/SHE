@@ -18,11 +18,13 @@ switch($operation){
         $jabatan = $obj -> jabatan;
         $unitKerja = $obj -> unitKerja;
         $noKTP = $obj -> noKTP;
+        $fotoPeserta =$obj -> fotoPeserta;
 
         if(!empty($namaPekerja)){
-            $sql = "INSERT INTO Pekerja (namaPekerja, tanggal, telepon, jabatan, unitKerja, noKTP) VALUES (?,?,?,?,?,?)";
+
+            $sql = "INSERT INTO Pekerja (namaPekerja, tanggal, telepon, jabatan, unitKerja, noKTP, fotoPeserta) VALUES (?,?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($namaPekerja, $tanggal, $telepon, $jabatan, $unitKerja, $noKTP));
+            $q->execute(array($namaPekerja, $tanggal, $telepon, $jabatan, $unitKerja, $noKTP, $fotoPeserta));
             $data = '{"status":"success"}';
         }
 
@@ -148,12 +150,12 @@ switch($operation){
         $izinKerjaKhusus =          $obj->izinKerjaKhusus;
         $catatan =                  $obj->catatan;
         $persetujuan =              $obj->persetujuan;
-        $fotoPeserta =              $obj->fotoPeserta;
+        
 
         if(!empty($pengaju)){
-            $sql = "INSERT INTO Ijin_Kerja (pengaju, tanggal, lokasiKerja, lingkupKerja, jamKerja, kebutuhanAlatBerat, pekerjaTerlibat, kelengkapanKeselamatan, perlengkapanKerja, izinKerjaKhusus, catatan, persetujuan, fotoPeserta) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO Ijin_Kerja (pengaju, tanggal, lokasiKerja, lingkupKerja, jamKerja, kebutuhanAlatBerat, pekerjaTerlibat, kelengkapanKeselamatan, perlengkapanKerja, izinKerjaKhusus, catatan, persetujuan) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($pengaju, $tanggal, $lokasiKerja,$lingkupKerja,$jamKerja,$kebutuhanAlatBerat,$pekerjaTerlibat,$kelengkapanKeselamatan, $perlengkapanKerja, $izinKerjaKhusus, $catatan, $persetujuan, $fotoPeserta));
+            $q->execute(array($pengaju, $tanggal, $lokasiKerja,$lingkupKerja,$jamKerja,$kebutuhanAlatBerat,$pekerjaTerlibat,$kelengkapanKeselamatan, $perlengkapanKerja, $izinKerjaKhusus, $catatan, $persetujuan));
             $data = '{"status":"success"}';
 
         }
